@@ -1,8 +1,11 @@
 <!doctype html>
 <html><head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>期末分組專案</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+<title>Python-Course</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
 
+<!-- for cnc starts -->
+<link rel="stylesheet" type="text/css" href="./../static/cnc/bootstrap.min.css" />
+<!-- for cnc ends -->
 <script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
@@ -17,7 +20,7 @@
 <link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- for LaTeX equations -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -38,7 +41,6 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
 <!-- 暫時不用
 <script src="./../static/fengari-web.js"></script>
 <script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
@@ -49,6 +51,14 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.red3border {
+    border: 3px solid red;
+}
+.black3border {
+    border: 3px solid black;
+}
+</style>
 
 <script src="./../static/jquery.js"></script>
 <script type="text/javascript">
@@ -67,36 +77,44 @@ $(function(){
 
 </ul>
 </confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><ul><li><a href='Group member.html'>Group member</a></li></ul><li><a href='Course.html'>Course</a><li><a href='Independent Study.html'>Independent Study</a><li><a href='Issue & Solution.html'>Issue & Solution</a><li><a href='Experience.html'>Experience</a><li><a href='PYTHON.html'>PYTHON</a></li></ul></nav><section>Experience << <a href='Experience.html'>Previous</a> <br /><h1>PYTHON</h1>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><ul><li><a href='Group member.html'>Group member</a></li></ul><li><a href='Course.html'>Course</a><li><a href='Independent Study.html'>Independent Study</a><li><a href='Issue & Solution.html'>Issue & Solution</a><li><a href='Experience.html'>Experience</a><li><a href='Python 語法.html'>Python 語法</a></li></ul></nav><section>Experience << <a href='Experience.html'>Previous</a> <br /><h1>Python 語法</h1>
+<p>Python 3 官方教材: <a href="https://docs.python.org/3/index.html">https://docs.python.org/3/index.html</a> </p>
+<p>Python tutorial: <a href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/3/tutorial/index.html</a> (英文)</p>
+<p>Python 教學: <a href="https://python-doc-tw.github.io/tutorial/index.html">https://python-doc-tw.github.io/tutorial/index.html</a> </p>
+<p>網頁上的 Python - Brython: <a href="https://www.brython.info/static_doc/en/intro.html">https://www.brython.info/static_doc/en/intro.html</a>  (解譯式)</p>
+<p>網頁上的 Python GUI- Flexx: <a href="https://flexx.readthedocs.io/en/stable/">https://flexx.readthedocs.io/en/stable/</a> (轉譯式)</p>
 <p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
+<script src="./../static/brython.js"></script>
+<script src="./../static/brython_stdlib.js"></script>
 <!-- for ggame -->
-<script src="/static/jquery-3.3.1.min.js"></script>
-<script src="/static/jquery-ui.1.12.1.min.js"></script>
-<script src="/static/pixi-3.0.5.min.js"></script>
-<script src="/static/buzz-1.2.1.js"></script>
+<script src="./../static/jquery-3.3.1.min.js"></script>
+<script src="./../static/jquery-ui.1.12.1.min.js"></script>
+<script src="./../static/pixi-3.0.5.min.js"></script>
+<script src="./../static/buzz-1.2.1.js"></script>
+<script src="./../static/bs.js"></script>
 <!-- Cango 程式庫 -->
-<script src="/static/Cango-13v08-min.js"></script>
-<script src="/static/CangoAxes-4v01-min.js"></script>
-<script src="/static/gearUtils-05.js"></script>
+<script src="./../static/Cango-13v08-min.js"></script>
+<script src="./../static/CangoAxes-4v01-min.js"></script>
+<script src="./../static/gearUtils-05.js"></script>
+<!-- for Konva 程式庫 -->
+<script src="./../static/konva.min.js"></script>
 <script>
 window.onload=function(){
-brython({debug:1, pythonpath:['/static/']});
+brython({debug:1, pythonpath:['./../static/']});
 }
 </script>
 </p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
-<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/static/ace/filereader.js" type="text/javascript"></script>
+<script src="./../static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="./../static/ace/filereader.js" type="text/javascript"></script>
 </p>
 <p><!-- 導入 ace --></p>
 <p>
-<script src="/static/ace/ace.js" type="text/javascript"></script>
-<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+<script src="./../static/ace/ace.js" type="text/javascript"></script>
+<script src="./../static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="./../static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="./../static/ace/snippets/python.js" type="text/javascript"></script>
 </p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
@@ -113,7 +131,13 @@ function doSave(storage_id, filename){
 <p>
 <script type="text/python3">
 from browser import document as doc
+from browser import html
 import ace
+
+# 清除畫布
+def clear_bd(ev):
+    bd = doc["brython_div"]
+    bd.clear()
 
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
@@ -140,15 +164,17 @@ Ace.editor.gotoLine(0)
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
+doc['clear_bd'].bind('click', clear_bd)
 </script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <div id="brython_div"></div>
+<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
 <p><!-- ****************************** keyword start -->
 <script type="text/python3">
 from browser import document as doc
@@ -771,15 +797,15 @@ from random import random, randint
 from browser import document as doc
 from browser import html
 import math
+
+# 引入既有的id="graphics-column" 標註
+graphics_column = doc["graphics-column"]
 # 建立內定名稱為 "ggame-canvas" 的 canvas 標註
 canvas = html.CANVAS(width = 600, height = 400)
 canvas.id = "ggame-canvas"
-brython_div = doc["brython_div"]
-brython_div <= canvas
-# 建立名稱為 graphics-column 且 1x1 大小的 div 標註
-graphics_column = html.DIV(width = 1, height = 1)
-graphics_column.id = "graphics-column"
-brython_div <= graphics_column
+# 將 canvas 插入 gc 標註中
+graphics_column <= canvas
+
 
 class Bunny(Sprite):
     
@@ -791,7 +817,9 @@ class Bunny(Sprite):
         App.listenMouseEvent(MouseEvent.mousedown, self.mousedown)
         App.listenMouseEvent(MouseEvent.mouseup, self.mouseup)
         App.listenMouseEvent(MouseEvent.mousemove, self.mousemove)
-        self.dragging = False
+        self.dragging = True
+        self.deltax = 0
+        self.deltay = 0
 
     
     def step(self):
@@ -826,7 +854,7 @@ class DemoApp(App):
     
     def __init__(self):
         super().__init__()
-        for i in range(20):
+        for i in range(5):
             Bunny((randint(50, 600), randint(50, 400)))
         
     def step(self):
@@ -991,77 +1019,831 @@ doc["spur"].bind('click', Spur.prog)
 </script>
 </p>
 <!-- cango spur gears ends -->
-<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bunny">Bunny</button><button id="spur">Spur</button><button id="clear">Clear</button></p>
+<p></p>
+<!-- temp convert start -->
 <p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-</p>
-<div id="brython_div"></div>
-<p>
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
 <script type="text/python3">
-# 導入 doc
 from browser import document as doc
-from browser import html
-import math
-canvas = html.CANVAS(width = 300, height = 200)
-canvas.style = {"width": "100%"}
-canvas.id = "taiwan_flag"
+import beditor
+Temp = beditor.editor("""# Temperature Conversion
+# Temperature Conversion
+'''
+C to F: Celsius to Fahrenheit Conversion Formula. To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+
+To convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).
+
+Fahrenheit = Celsius*9/5 + 32
+
+Celsium = (Fahrenheit - 32)*5/9
+'''
+from browser import document, html
+brython_div = document["brython_div"]
+
+def c2f(c):
+    f = round(c*9/5 + 32, 3)
+    return "Celsiusc: "+ str(c) +         " degrees = Fahrenheit: " + str(f) + " degrees"
+    
+def f2c(f):
+    c = round((f - 32)*5/9, 3)
+    return "Fahrenheit: "+ str(f) +         " degrees = Celsiusc: " + str(c) + " degrees"
+    
+choice = input("c2f or f2c")
+if choice == "c2f":
+    '''
+    c = float(input("input Celsius in degrees"))
+    print(c2f(c))
+    '''
+    for deg in range(100):
+        brython_div <= c2f(deg)
+        brython_div <= html.BR()
+else:
+    '''
+    f = float(input("input Fahrenheit in degrees"))
+    print(f2c(f))
+    '''
+    for deg in range(100):
+        brython_div <= f2c(deg)
+        brython_div <= html.BR()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "temp" 的按鈕點按時, 執行 Temp 物件中的 prog 方法
+doc["temp"].bind('click', Temp.prog)
+</script>
+</p>
+<!-- temp convert ends -->
+<p></p>
+<!-- forloop start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Forloop = beditor.editor("""# For loop
+for i in range(5):
+    print(i)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "forloop" 的按鈕點按時, 執行 Forloop 物件中的 prog 方法
+doc["forloop"].bind('click', Forloop.prog)
+</script>
+</p>
+<!-- forloop ends -->
+<p></p>
+<!-- guess start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Guess = beditor.editor("""# 猜數字遊戲
+from browser import document, html, alert
+import random
+
+# 跳出文字說明視窗
+alert("開始玩猜數字遊戲")
+# 利用 random 模組中的 randint 取 1~100 間的亂數
+標準答案 = random.randint(1, 100)
+# 利用 input 函式視窗, 取使用者所猜的數字, 轉為整數
+你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+# 猜測次數起始值設為 1
+猜測次數 = 1
+# 進入重複迴圈, 直到猜對數字
+while 標準答案 != 你猜的數字:
+    # 根據使用者所猜的數字, 與答案比較後, 給出提示
+    if 標準答案 < 你猜的數字:
+        alert("猜第" + str(猜測次數) + "次, 太大了，再猜 :)加油")
+    else:
+        alert("猜第" + str(猜測次數) + "次, 太小了，再猜 :)加油")
+    你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+    # 猜測次數累加
+    猜測次數 += 1
+
+# 跳出迴圈表示猜對, 給出最後文字說明視窗
+alert("猜對了！答案為" + str(標準答案) + ", 總共猜了" + str(猜測次數) + "次")
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "guess" 的按鈕點按時, 執行 Guess 物件中的 prog 方法
+doc["guess"].bind('click', Guess.prog)
+</script>
+</p>
+<!-- guess ends -->
+<p></p>
+<!-- autoguess start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Autoguess = beditor.editor("""# 程式自動猜數字遊戲
+from browser import document, html, alert
+import random
+ 
+id4 = document["brython_div"]
+
+執行次數 = 100
+總猜測次數 = 0
+for i in range(執行次數):
+    id4 <= "第" + str(i+1) + "次玩:" + html.BR()
+    下限 = 1
+    上限 = 100
+    標準答案 = random.randint(下限, 上限)
+    pc猜的數字 = random.randint(下限, 上限)
+    #print(標準答案, pc猜的數字)
+    #integer int()
+    #string str()
+    #float float()
+    #你猜的數字 = int(input("請輸入您所猜的整數:"))
+    猜測次數 = 1
+    while 標準答案 != pc猜的數字:
+        if 標準答案 < pc猜的數字:
+            #print("太大了，再猜一次 :)加油")
+            # 因此已經確定"pc猜的數字"不是答案, 因此 - 1
+            id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太大了!" + html.BR()
+            上限 = pc猜的數字 - 1
+        else:
+            #print("太小了，再猜一次 :)加油")
+            # 因此已經確定"pc猜的數字"不是答案, 因此 + 1
+            id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太小了!" + html.BR()
+            下限 = pc猜的數字 + 1
+        #pc猜的數字 = int(input("請輸入您所猜的整數:"))
+        pc猜的數字 = random.randint(下限, 上限)
+        猜測次數 += 1
+
+    #print("猜對了！總共猜了", 猜測次數, "次")
+    id4 <= "電腦猜對了, 答案為: " + str(標準答案) + ", 總共猜了 "+ str(猜測次數) + "次" + html.BR()
+    總猜測次數 += 猜測次數
+
+平均猜測次數 = int(總猜測次數/執行次數)
+#print("平均次數", 平均猜測次數)
+id4 <= "平均次數: " + str(平均猜測次數)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "autoguess" 的按鈕點按時, 執行 Autoguess 物件中的 prog 方法
+doc["autoguess"].bind('click', Autoguess.prog)
+</script>
+</p>
+<!-- autoguess ends -->
+<p></p>
+<!-- lottery start -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Lottery = beditor.editor("""# 大樂透電腦選號
+# lottery
+from browser import document, html, alert
+import random
+
+try:
+    total = int(input("請問要出幾張彩卷號碼?"))
+except:
+    alert("請輸入要選擇電腦選號數量的'整數'")
+    total = int(input("請問要出幾張彩卷號碼?"))
+
+# 準備將電腦選出的號碼, 輸出到內定 id="brython_div" 的標註區域
+output_div = document["brython_div"]
+output_div <= "以下將出 " + str(total) + " 張電腦選號彩卷:" + html.BR()
+for i in range(1, total + 1):
+    # 利用 list(range()) 產生 1 到 49 的 population list
+    # 然後再透過 random.sample(population, k) 
+    # 從 population, 產生 k 個不同的數字
+    numbers = random.sample(list(range(1, 49)), 6)
+    output_div <= str(i) + ". 電腦選號為: " + str(numbers) + html.BR()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "lottery" 的按鈕點按時, 執行 Lottery 物件中的 prog 方法
+doc["lottery"].bind('click', Lottery.prog)
+</script>
+</p>
+<!-- lottery ends -->
+<p></p>
+<!-- bezier starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Bezier = beditor.editor("""# Cango Bezier 繪圖
+from browser import window, html
+from browser import document as doc
+
+canvas = html.CANVAS(width = 600, height = 400)
+canvas.id = "canvas"
 brython_div = doc["brython_div"]
 brython_div <= canvas
 
-# 準備繪圖畫布
-canvas = doc["taiwan_flag"]
-ctx = canvas.getContext("2d")
-# 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
-# ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
-# 以下採用 canvas 原始座標繪圖
-flag_w = canvas.width
-flag_h = canvas.height
-circle_x = flag_w/4
-circle_y = flag_h/4
-# 先畫滿地紅
-ctx.fillStyle='rgb(255, 0, 0)'
-ctx.fillRect(0,0,flag_w,flag_h)
-# 再畫青天
-ctx.fillStyle='rgb(0, 0, 150)'
-ctx.fillRect(0,0,flag_w/2,flag_h/2)
-# 畫十二道光芒白日
-ctx.beginPath()
-star_radius = flag_w/8
-angle = 0
-for i in range(24):
-    angle += 5*math.pi*2/12
-    toX = circle_x + math.cos(angle)*star_radius
-    toY = circle_y + math.sin(angle)*star_radius
-    # 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
-    if (i):
-        ctx.lineTo(toX, toY)
-    else:
-        ctx.moveTo(toX, toY)
-ctx.closePath()
-# 將填色設為白色
-ctx.fillStyle = '#fff'
-ctx.fill()
-# 白日:藍圈
-ctx.beginPath()
-ctx.arc(circle_x, circle_y, flag_w*17/240, 0, math.pi*2, True)
-ctx.closePath()
-# 填色設為藍色
-ctx.fillStyle = 'rgb(0, 0, 149)'
-ctx.fill()
-# 白日:白心
-ctx.beginPath()
-ctx.arc(circle_x, circle_y, flag_w/16, 0, math.pi*2, True)
-ctx.closePath()
-# 填色設為白色
-ctx.fillStyle = '#fff'
-ctx.fill()
+# Javascript 物件
+cango = window.Cango.new
+path = window.Path.new
+shape = window.Shape.new
+group = window.Group.new
+# Javascript 變數
+shapedefs = window.shapeDefs
+g1 = cango("canvas")
+g1.clearCanvas()
+g1.gridboxPadding(10, 10, 5, 7)
+g1.fillGridbox("lightgreen")
+g1.setWorldCoordsRHC(-100, -100, 400)
+
+x1 = 40
+y1 = 20
+cx1 = 90
+cy1 = 120
+x2 = 120
+y2 = 100
+cx2 = 130
+cy2 = 20
+cx3 = 150
+cy3 = 120
+x3 = 180
+y3 = 60
+
+def dragC1(mousePos):
+    global cx1, cy1
+    cx1 = mousePos.x
+    cy1 = mousePos.y
+    drawCurve()
+
+def dragC2(mousePos):
+    global cx2, cy2
+    cx2 = mousePos.x
+    cy2 = mousePos.y
+    drawCurve()
+
+def dragC3(mousePos):
+    global cx3, cy3
+    cx3 = mousePos.x
+    cy3 = mousePos.y
+    drawCurve()
+
+def drawCurve():
+    qbez = path(['M', x1, y1, 'Q', cx1, cy1, x2, y2], {
+      'strokeColor':'blue'})
+    cbez = path(['M', x2, y2, 'C', cx2, cy2, cx3, cy3, x3, y3], {
+      'strokeColor':'green'})
+    L1 = path(['M', x1, y1, 'L', cx1, cy1, x2, y2], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    L2 = path(['M', x2, y2, 'L', cx2, cy2], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    L3 = path(['M', x3, y3, 'L', cx3, cy3], {
+      'strokeColor':"rgba(0, 0, 0, 0.2)",
+      'dashed':[4]})
+    c1.transform.translate(cx1, cy1)
+    c2.transform.translate(cx2, cy2)
+    c3.transform.translate(cx3, cy3)
+    grp = group(qbez, cbez, L1, L2, L3, c1, c2, c3)
+    g1.render(grp, True)
+
+g1.clearCanvas("lightyellow")
+g1.deleteAllLayers()
+g1.setWorldCoordsRHC(0, 0, 200)
+
+c1 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c1.enableDrag(None, dragC1, None)
+
+c2 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c2.enableDrag(None, dragC2, None)
+
+c3 = shape(shapedefs.circle(6), {'fillColor':'red'})
+c3.enableDrag(None, dragC3, None);
+
+drawCurve()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "bezier" 的按鈕點按時, 執行 Bezier 物件中的 prog 方法
+doc["bezier"].bind('click', Bezier.prog)
 </script>
 </p>
+<!-- bezier ends -->
 <p></p>
-<p></p><br />Experience << <a href='Experience.html'>Previous</a> </section></div></body></html>
+<!-- turtle1 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle1 = beditor.editor("""# Turtle1 繪圖
+from browser import window, html
+from browser import document as doc
+import turtle
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+t = turtle.Turtle()
+
+t.width(5)
+
+for c in ['red', '#00ff00', '#fa0', 'rgb(0,0,200)']:
+    t.color(c)
+    t.forward(100)
+    t.left(90)
+
+# dot() and write() do not require the pen to be down
+t.penup()
+t.goto(-30, -100)
+t.dot(40, 'rgba(255, 0, 0, 0.5')
+t.goto(30, -100)
+t.dot(40, 'rgba(0, 255, 0, 0.5')
+t.goto(0, -70)
+t.dot(40, 'rgba(0, 0, 255, 0.5')
+
+t.goto(0, 125)
+t.color('purple')
+t.write("這就是 Brython, 網頁上的 Python", font=("Arial", 15, "normal"))
+
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle1" 的按鈕點按時, 執行 Turtle1 物件中的 prog 方法
+doc["turtle1"].bind('click', Turtle1.prog)
+</script>
+</p>
+<!-- turtle1 ends -->
+<p></p>
+<!-- turtle2 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle2 = beditor.editor("""# Turtle2 繪圖
+from browser import document as doc
+import turtle
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+star = turtle.Turtle()
+
+for i in range(5):
+    star.forward(250)
+    star.right(144)
+    
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle2" 的按鈕點按時, 執行 Turtle2 物件中的 prog 方法
+doc["turtle2"].bind('click', Turtle2.prog)
+</script>
+</p>
+<!-- turtle2 ends -->
+<p></p>
+<!-- turtle3 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle3 = beditor.editor("""# Turtle3 繪圖
+# https://michael0x2a.com/blog/turtle-examples
+from browser import document as doc
+import turtle
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+painter = turtle.Turtle()
+
+painter.pencolor("blue")
+
+for i in range(50):
+    painter.forward(50)
+    painter.left(123) # Let's go counterclockwise this time 
+    
+painter.pencolor("red")
+for i in range(50):
+    painter.forward(100)
+    painter.left(123)
+    
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle3" 的按鈕點按時, 執行 Turtle3 物件中的 prog 方法
+doc["turtle3"].bind('click', Turtle3.prog)
+</script>
+</p>
+<!-- turtle3 ends -->
+<p></p>
+<!-- turtle4 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle4 = beditor.editor("""# Turtle4 繪圖
+# https://docs.python.org/3.7/library/turtle.html?highlight=turtle
+# https://fiftyexamples.readthedocs.io/en/latest/turtle.html
+from browser import document as doc
+import turtle
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+# 輸入 "turtle" 字串, 表示要使用內建的烏龜圖示
+t = turtle.Turtle("turtle")
+
+# 設定繪圖尺寸
+screen_x = 500-20
+screen_y = 300
+
+# 提筆, 將烏龜移動到畫布中心
+t.penup()
+t.home()
+
+# 內定方向為右, 前進 screen_x/2
+t.forward(screen_x / 2)
+# 將方向往右轉 90 度
+t.right(90)
+# 此時方向向下, 前進 screen_y/2
+t.forward(screen_y / 2)
+# 令烏龜方向轉絕對角度 180, 等同轉相對角度 90 度, 即 t.right(90)
+t.setheading(180)
+
+# 將畫筆顏色設為紅色
+t.pencolor('red')
+# 下筆準備繪圖
+t.pendown()
+# 設筆寬度為 10
+t.pensize(10)
+# 進入重複迴圈, 此時方向向右, 分別
+# 前進 screen_x, 之後轉 90 度, 方向朝上
+# 再前進 screen_y, 之後再轉 90 度, 方向朝右
+# 再前進 screen_x, 之後轉 90 度, 方向朝下
+# 最後再前進 screen_y 後, 將方向轉為向左
+for distance in (screen_x, screen_y, screen_x, screen_y):
+    t.forward(distance)
+    t.right(90)
+
+# 提筆後, 將烏龜轉回內定方向回到畫布中心
+t.penup()
+t.home()
+# 完成 turtle 繪圖
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle4" 的按鈕點按時, 執行 Turtle4 物件中的 prog 方法
+doc["turtle4"].bind('click', Turtle4.prog)
+</script>
+</p>
+<!-- turtle4 ends -->
+<p></p>
+<!-- turtle5 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle5 = beditor.editor("""# Turtle5 繪圖
+# https://brython.info/gallery/turtle.html
+from browser import document as doc
+import turtle
+import math
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+t = turtle.Turtle("turtle")
+t.speed(1)
+t.forward(50)
+
+print("Should be (50, 0):", t.position())
+print("Should be 50: ", t.xcor())
+print("Should be 0: ", t.ycor())
+
+t.left(90)
+t.color("blue")
+t.speed(2)
+t.fd(50)
+
+print("Should be (50, 50):", t.pos())
+print("Should be 225: ", t.towards(0, 0))
+print("Should be 90: ", t.heading())
+print("Should be approximately 71:", t.distance(0, 0))
+
+# Draw the same square in three different angle modes
+t.width(4)
+
+print("Drawing using degrees - the default")
+print("Heading should be 90: ", t.heading())
+
+for i in range(4):
+    t.forward(100)
+    t.left(90)
+
+print("Drawing using radians")
+
+t.radians()
+
+print("Heading should be pi/2: ", t.heading())
+
+for i in range(4):
+    t.forward(100)
+    t.left(math.pi/2)
+
+print("Drawing using gradients")
+
+t.degrees(400)
+
+print("Heading should be 100: ", t.heading())
+
+for i in range(4):
+    t.forward(100)
+    t.left(100)
+
+t.degrees()
+t.width(1)
+
+t.lt(90)
+t.color("orange")
+t.backward(50)
+t.right(90)
+t.color("green")
+t.back(50)
+t.rt(90)
+t.color("red")
+t.bk(50)
+t.stamp()
+t.speed(4)
+
+t.color("black", "white")
+t.goto(-100, 100)
+t.stamp()
+t.color("blue", "yellow")
+t.setposition(0, 100)
+t.stamp()
+t.color("green", "white")
+t.setpos(100, 100)
+t.stamp()
+
+t.speed(10)
+t.color("orange")
+t.sety(-100)
+t.setx(-100)
+t.stamp()
+
+t.color("cyan")
+t.home()
+t.stamp()
+
+t.color("green")
+t.width(4)
+t.setheading(180)
+t.forward(150)
+t.seth(90)
+t.fd(20)
+
+t.dot(30, "rgba(255, 0, 0, 0.2)")
+t.color("red")
+t.speed(0)
+t.forward(30)
+t.left(90)
+t.circle(30)
+
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle5" 的按鈕點按時, 執行 Turtle5 物件中的 prog 方法
+doc["turtle5"].bind('click', Turtle5.prog)
+</script>
+</p>
+<!-- turtle5 ends -->
+<p></p>
+<!-- turtle6 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle6 = beditor.editor("""# Turtle6 繪圖
+from browser import document as doc
+import turtle
+import math
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+
+t = turtle.Turtle("turtle")
+t.speed(10)
+
+colors = ['red', 'purple', 'blue', 'green', 'orange']
+for x in range(150):
+    t.pencolor(colors[x % 5])
+    t.width(x/10 + 1)
+    t.forward(x)
+    t.left(59)
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle6" 的按鈕點按時, 執行 Turtle6 物件中的 prog 方法
+doc["turtle6"].bind('click', Turtle6.prog)
+</script>
+</p>
+<!-- turtle6 ends -->
+<p></p>
+<!-- turtle7 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle7 = beditor.editor("""# Turtle7 繪圖
+from browser import document as doc
+import turtle
+import math
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+
+screen=turtle.Screen()    #making a canvas for drawing
+screen.bgcolor('black')    #making canvas black
+
+trtl=turtle.Turtle()  #making a turtle
+
+trtl.pencolor('red')    #making colour of the pen red
+trtl.pensize(5)    #choosing the size of pen nib 
+trtl.speed(10)    #choosing the speed of drawing
+# shape should be ‘arrow’, ‘classic’, ‘turtle’ or ‘circle’
+trtl.shape('turtle')   #choosing the shape of pen nib
+trtl.forward(150)    #drawing a line of 150 pixels
+trtl.right(90)    #asking turtle to turn 90 degrees
+trtl.forward(150)    #drawing a line of 150 pixels
+trtl.penup()    # preparing for moving pen without drawing
+trtl.setpos(-140,-120)    # making the new position of the turtle
+trtl.pendown()   # bringing the pen down for drawing again
+trtl.pencolor('green')    # choosin the pen colour as green
+trtl.write('Brython 烏龜繪圖', font=("Arial", 20, "bold"))    # chosing the font
+trtl.penup()
+trtl.ht()    # hiding the turtle from the screen
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle7" 的按鈕點按時, 執行 Turtle7 物件中的 prog 方法
+doc["turtle7"].bind('click', Turtle7.prog)
+</script>
+</p>
+<!-- turtle7 ends -->
+<p></p>
+<!-- turtle8 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Turtle8 = beditor.editor("""# Turtle8 繪圖
+from browser import document as doc
+import turtle
+import math
+turtle.set_defaults(
+    turtle_canvas_wrapper = doc['brython_div']
+)
+wn = turtle.Screen() 
+wn.bgcolor("black") 
+
+skk = turtle.Turtle() 
+skk.speed(10)
+skk.shape("circle")
+skk.color("blue") 
+  
+def sqrfunc(size): 
+    for i in range(4): 
+        skk.fd(size) 
+        skk.left(90) 
+        size = size-5
+  
+sqrfunc(146) 
+sqrfunc(126) 
+sqrfunc(106) 
+sqrfunc(86) 
+sqrfunc(66) 
+sqrfunc(46) 
+sqrfunc(26) 
+turtle.done()
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "turtle8" 的按鈕點按時, 執行 Turtle8 物件中的 prog 方法
+doc["turtle8"].bind('click', Turtle8.prog)
+</script>
+</p>
+<!-- turtle8 ends -->
+<p></p>
+<!-- konva1 starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Konva1 = beditor.editor("""# Konva1 繪圖
+# 引用 https://konvajs.github.io/ 繪圖
+from browser import document, html, window
+
+width = 600
+height = 400
+
+konva = window.Konva
+# Konva 必須在 canvas 繪圖, 從上方設定,  canvas id 為 "container"
+stage = konva.Stage.new({
+        "container": 'brython_div',
+        "width": width,
+        "height": height
+    })
+
+layer = konva.Layer.new()
+rectX = stage.getWidth() / 2 - 50
+rectY = stage.getHeight() / 2 - 25
+
+box = konva.Rect.new({
+        "x": rectX,
+        "y": rectY,
+        "width": 100,
+        "height": 50,
+        "fill": '#00D2FF',
+        "stroke": 'black',
+        "strokeWidth": 4,
+        "draggable": True
+    })
+
+def f1():
+    document.body.style.cursor = 'pointer'
+    
+def f2():
+    document.body.style.cursor = 'default'
+
+# add cursor styling
+box.on('mouseover', f1())
+box.on('mouseout', f2())
+
+layer.add(box)
+stage.add(layer)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "konva1" 的按鈕點按時, 執行 Konva1 物件中的 prog 方法
+doc["konva1"].bind('click', Konva1.prog)
+</script>
+</p>
+<!-- konva1 ends -->
+<p></p>
+<!-- ycqsort starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Ycqsort = beditor.editor("""# Ycombinator quicksort example
+Y = lambda f: lambda *args: f(Y(f))(*args)
+
+quicksort = Y(lambda f:
+    lambda x: (
+        f([item for item in x if item < x[0]])
+        + [y for y in x if x[0] == y]
+        + f([item for item in x if item > x[0]])
+    ) if x else [])
+    
+print(quicksort([1, 3, 5, 4, 1, 3, 2]))
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "ycqsort" 的按鈕點按時, 執行 Ycqsort 物件中的 prog 方法
+doc["ycqsort"].bind('click', Ycqsort.prog)
+</script>
+</p>
+<!-- ycqsort ends -->
+<p></p>
+<!-- ball starts -->
+<p>
+<script type="text/python3">
+from browser import document as doc
+import beditor
+Ball = beditor.editor("""# Ggame ball example
+from ggame import (
+    App, 
+    Color, 
+    LineStyle, 
+    Sprite, 
+    RectangleAsset, 
+    ImageAsset,
+    CircleAsset, 
+    EllipseAsset, 
+    PolygonAsset,
+)
+from browser import document as doc
+from browser import html
+
+# 引入既有的id="graphics-column" 標註
+graphics_column = doc["graphics-column"]
+# 建立內定名稱為 "ggame-canvas" 的 canvas 標註
+canvas = html.CANVAS(width = 600, height = 100)
+canvas.id = "ggame-canvas"
+# 將 canvas 插入 gc 標註中
+graphics_column <= canvas
+
+# reverse - change the ball direction
+def reverse(b):
+    b.direction *= -1
+
+# Set up function for handling screen refresh
+def step():
+    if ball.go:
+        ball.x += ball.direction
+        if ball.x + ball.width > myapp.width or ball.x < 0:
+            ball.x -= ball.direction
+            reverse(ball)
+
+myapp = App()
+# Three primary colors with no transparency (alpha = 1.0)
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+# define colors and line style
+green = Color(0x00ff00, 1)
+black = Color(0, 1)
+noline = LineStyle(0, black)
+# a rectangle asset and sprite to use as background
+bg_asset = RectangleAsset(canvas.width, canvas.height, noline, green)
+bg = Sprite(bg_asset, (0,0))
+ball_asset = ImageAsset("./../images/orb-150545_640.png")
+ball = Sprite(ball_asset, (0, 0))
+# Original image is too big. Scale it to 1/10 its original size
+ball.scale = 0.1
+# custom attributes
+ball.direction = 7
+ball.go = True
+myapp.run(step)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "ball" 的按鈕點按時, 執行 Ball 物件中的 prog 方法
+doc["ball"].bind('click', Ball.prog)
+</script>
+</p>
+<!-- ball ends -->
+<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button><button id="forloop">Ex5</button><button id="guess">Guess</button><button id="autoguess">Autoguess</button><button id="lottery">Lottery</button><button id="temp">Temp</button><button id="draw">Draw</button><button id="flag">Flag</button><button id="bezier">Bezier</button><button id="turtle1">Turtle1</button><button id="turtle2">Turtle2</button><button id="turtle3">Turtle3</button><button id="turtle4">Turtle4</button><button id="turtle5">Turtle5</button><button id="turtle6">Turtle6</button><button id="turtle7">Turtle7</button><button id="turtle8">Turtle8</button><button id="konva1">Konva1</button><button id="bunny">Bunny</button><button id="ball">Ball</button><button id="spur">Spur</button><button id="ycqsort">Ycqsort</button><button id="clear">Clear</button></p>
+<h4>參考資料:</h4>
+<p><a href="./../downloads/turtle_intro.pdf">turtle_intro.pdf</a></p>
+<p><a href="./../downloads/turtle_intro2.pdf">turtle_intro2.pdf</a></p>
+<p>其他擷取程式的方式: <a href="http://mde.tw/2017springvcp/blog/web-based-python.html">http://mde.tw/2017springvcp/blog/web-based-python.html</a> </p><br />Experience << <a href='Experience.html'>Previous</a> </section></div></body></html>
