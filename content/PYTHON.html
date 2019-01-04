@@ -1,14 +1,73 @@
-<h1>Introduction</h1>
-<p> 設計一甲第7組 期末分組網站</p>
-<p>本倉儲位於: <a href="https://github.com/mdecp2018/finalproject-ag7">https://github.com/mdecp2018/finalproject-ag7</a></p>
-<h2>Group member</h2>
-<p>40723142 (組長)詹昇澤 期中自評成績(60分)</p>
-<p>40723132 (組員)陳乾豐 期中自評成績(68分)</p>
-<p>40723126 (組員)張瑋庭 期中自評成績(65分)</p>
-<p>40723122 (組員)施東勝 期中自評成績(65分)</p>
-<p>40723149 (組員)鄭嘉文 期中自評成績(60分)</p>
-<p>40723146 (組員)劉敬中 期中自評成績(60分)</p>
-<h1>PYTHON</h1>
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>期末分組專案</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script src="./../static/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+</script>
+
+</head><header><h1>設計一甲第7組期末分組網站</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><ul><li><a href='Group member.html'>Group member</a></li></ul><li><a href='PYTHON.html'>PYTHON</a><li><a href='Course.html'>Course</a><li><a href='Onshape.html'>Onshape</a><li><a href='Independent Study.html'>Independent Study</a><li><a href='Issue & Solution.html'>Issue & Solution</a><li><a href='Experience.html'>Experience</a></li></ul></nav><section>Group member << <a href='Group member.html'>Previous</a> <a href='Course.html'>Next</a> >> Course<br /><h1>PYTHON</h1>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -724,7 +783,7 @@ brython_div <= graphics_column
 
 class Bunny(Sprite):
     
-    asset = ImageAsset("/images/bunny.png")
+    asset = ImageAsset("./../images/bunny.png")
     
     def __init__(self, position):
         super().__init__(Bunny.asset, position)
@@ -937,76 +996,4 @@ doc["spur"].bind('click', Spur.prog)
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 </p>
-<h1 id="brython_div">Course</h1>
-<h1>Onshape</h1>
-<h1>Independent Study</h1>
-<h1>Issue &amp; Solution</h1>
-<h1>Experience</h1>
-<p>
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-<script type="text/python3">
-# 導入 doc
-from browser import document as doc
-from browser import html
-import math
-canvas = html.CANVAS(width = 300, height = 200)
-canvas.style = {"width": "100%"}
-canvas.id = "taiwan_flag"
-brython_div = doc["brython_div"]
-brython_div <= canvas
-
-# 準備繪圖畫布
-canvas = doc["taiwan_flag"]
-ctx = canvas.getContext("2d")
-# 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
-# ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
-# 以下採用 canvas 原始座標繪圖
-flag_w = canvas.width
-flag_h = canvas.height
-circle_x = flag_w/4
-circle_y = flag_h/4
-# 先畫滿地紅
-ctx.fillStyle='rgb(255, 0, 0)'
-ctx.fillRect(0,0,flag_w,flag_h)
-# 再畫青天
-ctx.fillStyle='rgb(0, 0, 150)'
-ctx.fillRect(0,0,flag_w/2,flag_h/2)
-# 畫十二道光芒白日
-ctx.beginPath()
-star_radius = flag_w/8
-angle = 0
-for i in range(24):
-    angle += 5*math.pi*2/12
-    toX = circle_x + math.cos(angle)*star_radius
-    toY = circle_y + math.sin(angle)*star_radius
-    # 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
-    if (i):
-        ctx.lineTo(toX, toY)
-    else:
-        ctx.moveTo(toX, toY)
-ctx.closePath()
-# 將填色設為白色
-ctx.fillStyle = '#fff'
-ctx.fill()
-# 白日:藍圈
-ctx.beginPath()
-ctx.arc(circle_x, circle_y, flag_w*17/240, 0, math.pi*2, True)
-ctx.closePath()
-# 填色設為藍色
-ctx.fillStyle = 'rgb(0, 0, 149)'
-ctx.fill()
-# 白日:白心
-ctx.beginPath()
-ctx.arc(circle_x, circle_y, flag_w/16, 0, math.pi*2, True)
-ctx.closePath()
-# 填色設為白色
-ctx.fillStyle = '#fff'
-ctx.fill()
-</script>
-</p>
-<p></p>
-<p></p>
+<br />Group member << <a href='Group member.html'>Previous</a> <a href='Course.html'>Next</a> >> Course</section></div></body></html>
