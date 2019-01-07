@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2"/>
-<globals/>
+<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
+<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
+	<global_window_position top="50" left="50" height="500" width="700"/>
+	<global_log_window_position top="0" left="0" height="0" width="0"/>
+</globals>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
@@ -10,16 +13,16 @@
 <v t="amd.20160714225308.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="amd.20160714225308.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20180702145534.1"><vh>wsgi start/stop</vh>
+<v t="leo.20180702145534.1" a="E"><vh>wsgi start/stop</vh>
 <v t="leo.20180702142719.1"><vh>@button start wsgi</vh></v>
 <v t="leo.20180702142849.1"><vh>@button stop wsgi</vh></v>
 </v>
-<v t="leo.20180702145555.1"><vh>http start/stop</vh>
+<v t="leo.20180702145555.1" a="E"><vh>http start/stop</vh>
 <v t="leo.20180702145442.1"><vh>@button start http.server</vh></v>
 <v t="leo.20180702145458.1"><vh>@button stop http.server</vh></v>
 </v>
 <v t="leo.20180703102027.1"><vh>@edit README.md</vh></v>
-<v t="amd.20160714225245.2"><vh>about cmsimfly</vh>
+<v t="amd.20160714225245.2" a="E"><vh>about cmsimfly</vh>
 <v t="amd.20160714230137.1"><vh>@edit .gitignore</vh></v>
 <v t="amd.20160714230155.1"><vh>@edit LICENSE</vh></v>
 </v>
@@ -37,11 +40,11 @@
 <v t="amd.20160718125943.1"><vh>@edit stlviewer.js</vh></v>
 <v t="amd.20160718212341.1"><vh>@edit jsc3d.js</vh></v>
 </v>
-<v t="amd.20160714230058.1"><vh>@clean wsgi.py</vh>
+<v t="amd.20160714230058.1" a="E"><vh>@clean wsgi.py</vh>
 <v t="amd.20160714230122.1"><vh>wsgi declarations</vh></v>
 </v>
-<v t="amd.20160714230833.1"><vh>編輯 flaskapp.py</vh>
-<v t="leo.20181104192450.1"><vh>@clean flaskapp.py</vh>
+<v t="amd.20160714230833.1" a="E"><vh>編輯 flaskapp.py</vh>
+<v t="leo.20181104192450.1" a="E"><vh>@clean flaskapp.py</vh>
 <v t="leo.20181104192502.1"><vh>Declarations</vh></v>
 <v t="leo.20181104192502.2"><vh>checkLogin</vh></v>
 <v t="leo.20181104192502.3"><vh>delete_file</vh></v>
@@ -105,8 +108,6 @@
 <v t="leo.20181104192502.61"><vh>syntaxhighlight2</vh></v>
 <v t="leo.20181104192502.62"><vh>tinymce_editor</vh></v>
 <v t="leo.20181104192502.63"><vh>unique</vh></v>
-<v t="leo.20181205140659.1"><vh>edit_report</vh></v>
-<v t="leo.20181205162212.1"><vh>do_edit_report</vh></v>
 </v>
 </v>
 </vnodes>
@@ -400,7 +401,8 @@ def edit_page(edit):
 </t>
 <t tx="leo.20181104192502.14">def editorhead():
     return '''
-&lt;br /&gt;
+    &lt;br /&gt;
+&lt;!--&lt;script src="//cdn.tinymce.com/4/tinymce.min.js"&gt;&lt;/script&gt;--&gt;
 &lt;script src="/static/tinymce4/tinymce/tinymce.min.js"&gt;&lt;/script&gt;
 &lt;script src="/static/tinymce4/tinymce/plugins/sh4tinymce/plugin.min.js"&gt;&lt;/script&gt;
 &lt;link rel = "stylesheet" href = "/static/tinymce4/tinymce/plugins/sh4tinymce/style/style.css"&gt;
@@ -411,7 +413,7 @@ tinymce.init({
   element_format : "html",
   language : "en",
   valid_elements : '*[*]',
-  extended_valid_elements: "script[language|type|src|id]",
+  extended_valid_elements: "script[language|type|src]",
   plugins: [
     'advlist autolink lists link image charmap print preview hr anchor pagebreak',
     'searchreplace wordcount visualblocks visualchars code fullscreen',
@@ -843,10 +845,8 @@ def get_page(heading, edit):
     # 直接在此將 /images/ 換為 ./../images/, /downloads/ 換為 ./../downloads/, 以 content 為基準的相對目錄設定
     page = [w.replace('/images/', './../images/') for w in page]
     page = [w.replace('/downloads/', './../downloads/') for w in page]
-    # 假如有 src="/static/ace/則換為 src="./../static/ace/
-    page = [w.replace('src="/static/', 'src="./../static/') for w in page]
-    # 假如有 pythonpath:['/static/'] 則換為 pythonpath:['./../static/']
-    page = [w.replace("pythonpath:['/static/']", "pythonpath:['./../static/']") for w in page]
+    # 假如有 /static/ace/ 則換為 ./../static/ace/
+    page = [w.replace('/static/', './../static/') for w in page]
     directory = render_menu2(head, level, page)
     if heading is None:
         heading = head[0]
@@ -1247,9 +1247,7 @@ return 'images/';
 def index():
     head, level, page = parse_content()
     # fix first Chinese heading error
-    # 2018.12.13, 將空白轉為"+" 號, 會導致連線錯誤, 改為直接取頁面標題
-    #return redirect("/get_page/" + urllib.parse.quote_plus(head[0], encoding="utf-8"))
-    return redirect("/get_page/" + head[0])
+    return redirect("/get_page/" + urllib.parse.quote_plus(head[0]))
     # the following will never execute
     directory = render_menu(head, level, page)
     if heading is None:
@@ -1922,7 +1920,7 @@ def send_static():
     outstring = '''&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
 &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
-&lt;title&gt;''' + init.Init.site_title + '''&lt;/title&gt; \
+&lt;title&gt;期末分組專案&lt;/title&gt; \
 &lt;link rel="stylesheet" type="text/css" href="/static/cmsimply.css"&gt;
 ''' + syntaxhighlight()
 
@@ -1974,7 +1972,7 @@ window.location= 'https://' + location.host + location.pathname + location.searc
     outstring = '''&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
 &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
-&lt;title&gt;''' + init.Init.site_title + '''&lt;/title&gt; \
+&lt;title&gt;期末分組專案&lt;/title&gt; \
 &lt;link rel="stylesheet" type="text/css" href="/static/cmsimply.css"&gt;
 ''' + syntaxhighlight()
 
@@ -2032,7 +2030,7 @@ window.location= 'https://' + location.host + location.pathname + location.searc
     outstring = '''&lt;!doctype html&gt;
 &lt;html&gt;&lt;head&gt;
 &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
-&lt;title&gt;''' + init.Init.site_title + '''&lt;/title&gt; \
+&lt;title&gt;期末分組專案&lt;/title&gt; \
 &lt;link rel="stylesheet" type="text/css" href="./../static/cmsimply.css"&gt;
 ''' + syntaxhighlight2()
 
@@ -2172,9 +2170,6 @@ def download():
 </t>
 <t tx="leo.20181104192502.60">def syntaxhighlight():
     return '''
-&lt;!-- for cnc starts --&gt;
-&lt;link rel="stylesheet" type="text/css" href="/static/cnc/bootstrap.min.css" /&gt;
-&lt;!-- for cnc ends --&gt;
 &lt;script type="text/javascript" src="/static/syntaxhighlighter/shCore.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="/static/syntaxhighlighter/shBrushJScript.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="/static/syntaxhighlighter/shBrushJava.js"&gt;&lt;/script&gt;
@@ -2189,7 +2184,7 @@ def download():
 &lt;link type="text/css" rel="stylesheet" href="/static/syntaxhighlighter/css/shCoreDefault.css"/&gt;
 &lt;script type="text/javascript"&gt;SyntaxHighlighter.all();&lt;/script&gt;
 
-&lt;!-- for LaTeX equations --&gt;
+&lt;!-- for LaTeX equations 暫時不用
     &lt;script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"&gt;&lt;/script&gt;
     &lt;script type="text/javascript"&gt;
     init_mathjax = function() {
@@ -2210,6 +2205,7 @@ def download():
     }
     init_mathjax();
     &lt;/script&gt;
+ --&gt;
  &lt;!-- 暫時不用
 &lt;script src="/static/fengari-web.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="/static/Cango-13v08-min.js"&gt;&lt;/script&gt;
@@ -2221,11 +2217,8 @@ def download():
 &lt;script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"&gt;&lt;/script&gt;
 --&gt;
 &lt;style&gt;
-img.red3border {
+img {
     border: 3px solid red;
-}
-.black3border {
-    border: 3px solid black;
 }
 &lt;/style&gt;
 '''
@@ -2235,9 +2228,6 @@ img.red3border {
 </t>
 <t tx="leo.20181104192502.61">def syntaxhighlight2():
     return '''
-&lt;!-- for cnc starts --&gt;
-&lt;link rel="stylesheet" type="text/css" href="./../static/cnc/bootstrap.min.css" /&gt;
-&lt;!-- for cnc ends --&gt;
 &lt;script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"&gt;&lt;/script&gt;
@@ -2252,7 +2242,7 @@ img.red3border {
 &lt;link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/&gt;
 &lt;script type="text/javascript"&gt;SyntaxHighlighter.all();&lt;/script&gt;
 
-&lt;!-- for LaTeX equations --&gt;
+&lt;!-- for LaTeX equations 暫時不用
 &lt;script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
 init_mathjax = function() {
@@ -2273,6 +2263,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 &lt;/script&gt;
+--&gt;
 &lt;!-- 暫時不用
 &lt;script src="./../static/fengari-web.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="./../static/Cango-13v08-min.js"&gt;&lt;/script&gt;
@@ -2284,11 +2275,8 @@ init_mathjax();
 &lt;script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"&gt;&lt;/script&gt;
 --&gt;
 &lt;style&gt;
-img.red3border {
+img {
     border: 3px solid red;
-}
-.black3border {
-    border: 3px solid black;
 }
 &lt;/style&gt;
 '''
@@ -2509,36 +2497,6 @@ def downloads(path):
 
 
 # 與 file_selector 搭配的取檔程式
-</t>
-<t tx="leo.20181205140659.1">@app.route('/edit_report')
-def edit_report():
-    head, level, page = parse_content()
-    directory = render_menu(head, level, page)
-    dir = "./report/markdown/paragraph"
-    outstring = ""
-    files = os.listdir(dir)
-    for i in range(len(files)):
-        outstring += "Edit: &lt;a href='/do_edit_report/" + str(files[i]) +"'&gt;" + str(files[i]) + "&lt;/a&gt;"
-        outstring += "&lt;br /&gt;"
-    #output = '&lt;br /&gt;'.join(map(str, files))
-    return set_css() + "&lt;div class='container'&gt;&lt;nav&gt;" + \
-             directory + "&lt;/nav&gt;&lt;section&gt;" + outstring + "&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
-
-</t>
-<t tx="leo.20181205162212.1">@app.route('/do_edit_report/&lt;file_name&gt;')
-def do_edit_report(file_name):
-    if file_name is None:
-        pass
-    head, level, page = parse_content()
-    directory = render_menu(head, level, page)
-    dir = "./report/markdown/paragraph"
-    filename = dir + "/" + file_name
-    file_content = file_get_contents(filename)
-    outstring = ""
-    outstring += file_content
-    return set_css() + "&lt;div class='container'&gt;&lt;nav&gt;" + \
-             directory + "&lt;/nav&gt;&lt;section&gt;" + outstring + "&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
-
 </t>
 </tnodes>
 </leo_file>

@@ -1,3 +1,4 @@
-# 第七組分組報告
-分組示範倉儲: https://mdecp2018.github.io/finalproject-ag7/content/index.html
+# 2018fall
+2018 Fall 計算機程式與電腦輔助設計實習課程分組倉儲
 
+網站: https://mdecp2018.github.io/finalproject-bgx

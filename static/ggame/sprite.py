@@ -177,7 +177,7 @@ class Sprite(object):
         defined with multiple images.
         """
         self.GFX.texture = self.asset[0]
-    
+
     def lastImage(self):
         """
         Select and display the *last* image used by this sprite. This only 
@@ -185,7 +185,7 @@ class Sprite(object):
         defined with multiple images.
         """
         self.GFX.texture = self.asset[-1]
-    
+
     def nextImage(self, wrap = False):
         """
         Select and display the *next* image used by this sprite.
@@ -206,7 +206,7 @@ class Sprite(object):
             else:
                 self._index = len(self.asset)-1
         self.GFX.texture = self.asset[self._index]
-    
+
     def prevImage(self, wrap = False):
         """
         Select and display the *previous* image used by this sprite.
@@ -227,7 +227,7 @@ class Sprite(object):
             else:
                 self._index = 0
         self.GFX.texture = self.asset[self._index]
-    
+
     def setImage(self, index=0):
         """
         Select the image to display by giving its `index`.
@@ -248,14 +248,14 @@ class Sprite(object):
         Obsolete. No op.
         """
         pass
-    
+
     def circularCollisionModel(self):
         """
         Obsolete. No op.
         """
         pass
-    
-    
+
+
 
     @property
     def index(self):
@@ -283,7 +283,7 @@ class Sprite(object):
     def width(self, value):
         self.GFX.width = value
         self._extentsdirty = True
-    
+
     @property
     def height(self):
         """
@@ -291,7 +291,7 @@ class Sprite(object):
         Assigning a value to the height will scale the image vertically.
         """
         return self.GFX.height
-    
+
     @height.setter
     def height(self, value):
         self.GFX.height = value
@@ -384,7 +384,7 @@ class Sprite(object):
             self._extentsdirty = True
         except:
             pass
-    
+
     @property
     def center(self):
         """
@@ -406,7 +406,7 @@ class Sprite(object):
             self._extentsdirty = True
         except:
             pass
-    
+
     @property
     def visible(self):
         """
@@ -415,7 +415,7 @@ class Sprite(object):
         screen.
         """
         return self.GFX.visible
-    
+
     @visible.setter
     def visible(self, value):
         self.GFX.visible = value
@@ -460,7 +460,7 @@ class Sprite(object):
     @classmethod
     def collidingCircleWithPoly(cls, circ, poly):
         return True
-    
+
     def collidingPolyWithPoly(self, obj):
         return True
 

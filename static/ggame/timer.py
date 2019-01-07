@@ -2,7 +2,7 @@ from time import time
 from ggame.mathapp import MathApp, _MathDynamic
 
 class Timer(_MathDynamic):
-    
+
     def __init__(self):
         super().__init__()
         self.once = []

@@ -12,6 +12,9 @@ if module_exists('browser') and module_exists('javascript'):
     from javascript import JSObject, JSConstructor
     #load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
     #load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
+    #load("static/pixi-4.8.2.min.js")
+    #load("/static/pixi-3.0.5.min.js")
+    #load("/static/buzz-1.2.1.js")
     major = window.__BRYTHON__.implementation[0]
     minor = window.__BRYTHON__.implementation[1]
     if major == 3 and minor >= 3 or major > 3:
@@ -43,25 +46,21 @@ if module_exists('browser') and module_exists('javascript'):
         def __init__(self, width, height, onclose):
             canvas = window.document.getElementById('ggame-canvas')
             if canvas:
-                '''
                 self._w = window
-                window.bsUI.graphicsmode()
-                options = {'transparent':True, 'antialias':True, 'view':canvas}
-                attachpoint = window.document.getElementById('graphics-column')
-                w, h = attachpoint.clientWidth, attachpoint.clientHeight
-                '''
-                self._w =window
-                window.bsUI.graphicsmode()
-                #w, h = canvas.width, canvas.height
+                # 必須關閉下列一行才能顯示
+                #window.bsUI.graphicsmode()
                 options = {'transparent':True, 'antialias':True, 'view':canvas}
                 attachpoint = window.document.getElementById('graphics-column')
                 w, h = attachpoint.clientWidth, attachpoint.clientHeight
             else:
+                # 假如要執行時額外跳出一個視窗
                 #self._w = window.open("", "")
-                self._w =window
+                # 在原先的視窗中執行
+                self._w = window
                 w, h = self._w.innerWidth * 0.9, self._w.innerHeight * 0.9
                 options = {'transparent':True, 'antialias':True}
                 attachpoint = self._w.document.body
+            # upgrade to pixi 4
             GFX.utils._saidHello = True; # ugly hack to block pixi banner
             self._stage = GFX_NewStage()
             self.width = width if width != 0 else int(w)
@@ -69,24 +68,24 @@ if module_exists('browser') and module_exists('javascript'):
             self._renderer = GFX.autoDetectRenderer(self.width, self.height, options)
             attachpoint.appendChild(self._renderer.view)
             self._w.onunload = onclose
-      
+
         def bind(self, evtspec, callback):
             self._w.document.body.unbind(evtspec) # in case already bound
             self._w.document.body.bind(evtspec, callback)
 
         def unbind(self, evtspec):
             self._w.document.body.unbind(evtspec)
-          
+
         def add(self, obj):
             self._stage.addChild(obj)
-          
+
         def remove(self, obj):
             self._stage.removeChild(obj)
-          
+
         def animate(self, stepcallback):
             self._renderer.render(self._stage)
             self._w.requestAnimationFrame(stepcallback)
-          
+
         def destroy(self):
             SND.all().stop()
             self._stage.destroy()
