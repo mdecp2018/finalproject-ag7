@@ -1,101 +1,41 @@
-<h1>簡介</h1>
-<p>2018 Fall 期末分組網站</p>
-<p>本倉儲位於: <a href="https://github.com/mdecp2018/finalproject-bgx">https://github.com/mdecp2018/finalproject-bgx</a>  </p>
-<p>Github 靜態網站:  <a href="https://mdecp2018.github.io/finalproject-bgx">https://mdecp2018.github.io/finalproject-bgx</a> </p>
-<p>與 Heroku 上的 <a href="http://cp2018-bgx.herokuapp.com">http://cp2018-bgx.herokuapp.com</a> 動態網站保持同步</p>
-<h2>可攜系統更新</h2>
-<p><a href="https://drive.google.com/open?id=1qSnGb4NBmfGG0jGVNfQJX_9TNVweIdFW">p37-18.12.7z</a></p>
-<p>升級為 Python 3.7.1 (<a href="https://docs.python.org/3/whatsnew/3.7.html">What's New in Python 3.7.1</a>)</p>
-<p>內含 Heroku cli  版本 7.18.9 (啟動可攜系統後, 以 heroku --version 查詢版次, 以 heroku login 登入系統, 以 heroku logs 查詢啟動紀錄)</p>
-<p>內含 Eric6 IDE 18.11</p>
-<p>內含 V-rep 3.5.0 rev4</p>
-<p>內含 Fossil SCM Verion 2.7</p>
-<hr/>
-<p>上述從 Python 3.7.0 更新到 Python 3.7.1 是將安裝在 c:\python37 目錄下的系統安裝檔案, 直接覆蓋 Python 3.7.0 可攜版本.</p>
-<p>但因 Scripts/pip.exe 與 pip3.7.exe 與 pip3.exe 會將 c:\python37 直接寫入這三個 .exe 檔案, 導致直接執行 pip 時, 會因為找不到 c:\python37\python.exe 而無法執行, 必須使用 python -m pip 才能執行.</p>
-<p>修改方式為使用 <a href="https://mh-nexus.de/en/hxd/">https://mh-nexus.de/en/hxd/</a> , 在二位元模式下編輯這三個 .exe 檔案, 將 c:\python37 換為 y:\p37 即可.</p>
-<p>可攜 <a href="/downloads/HxD.7z">HxD.7z</a></p>
-<p></p>
-<p></p><h2>靜態與動態網站</h2>
-<h4>網站類型</h4>
-<p>使用者在建構網站時, 可以選擇採用靜態或動態網站類型, 靜態網站主要伺服 <a href="https://en.wikipedia.org/wiki/HTML">html</a> 檔案, 其中可能內含能在客戶端瀏覽器中執行的 <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> 程式.</p>
-<p>而動態網站則將網際程式儲存在伺服器端, 透過解譯器與瀏覽器端的使用者互動後, 將 <a href="https://en.wikipedia.org/wiki/HTML">html</a> 檔案 (也可能內含能在客戶端瀏覽器中執行的 <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> 程式) 送回瀏覽器端執行.</p>
-<p>本課程的靜態網站利用 <a href="https://pages.github.com/">Github Pages</a> 建構, 而動態網站則採用 <a href="https://www.heroku.com/">Heroku</a> 建構.</p>
-<h4>靜態網站優點</h4>
-<p>相對於動態網站, 靜態網站架構單純, 且直接送回使用者要求的 <a href="https://en.wikipedia.org/wiki/HTML">html</a> 檔案, 反應速度快, 伺服器端通常只需 <a href="https://en.wikipedia.org/wiki/World_Wide_Web">WWW</a>  伺服器, 因此維護成本較低.</p>
-<ol>
-<li>架構單純</li>
-<li>反應速度快</li>
-<li>維護成本較低</li>
-<li>較無受駭危機</li>
-</ol>
-<h4>靜態網站缺點</h4>
-<ol>
-<li>通常無法直接在網站中修改內容</li>
-<li>較無法與使用者進行互動</li>
-</ol>
-<h4>動態網站優點</h4>
-<ol>
-<li>規劃彈性高</li>
-<li>能與使用者直接進行互動</li>
-</ol>
-<h4>動態網站缺點</h4>
-<ol>
-<li>反應速度較慢</li>
-<li>維護成本較高</li>
-</ol>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_wFJj94kSTU" width="560"></iframe></p><h1>Heroku 簡介</h1>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/QTOkqzCTGxw" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/nRiykxq0oHQ" width="560"></iframe></p>
-<p></p><h2>Heroku 設定</h2>
-<p>在 <a href="http://mde.tw">http://mde.tw</a> 相關課程中, <a href="https://www.heroku.com/">Heroku</a>  雲端服務與 Github 倉儲中的 <a href="https://pages.github.com/">Github Pages</a> 分別扮演動態程式網站與靜態超文件網站伺服.</p>
-<p>此地所謂的動態程式網站伺服, 指的是利用 <a href="http://flask.pocoo.org/">Flask</a> 程式框架, 建立 <a href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">Web Server Gateway  Interface</a> 架構的程式環境.</p>
-<p>而靜態超文件網站伺服, 則包含一個 <a href="https://en.wikipedia.org/wiki/World_Wide_Web">WWW</a> 伺服器, 得以讓使用者透過瀏覽器, 擷取伺服器上的 <a href="https://en.wikipedia.org/wiki/HTML">html</a> 與 <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> 程式, 且 <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> 是下載到近端之後, 使用近端的硬體執行.</p>
-<p>以下說明如何在近端利用可攜 <a href="https://devcenter.heroku.com/articles/heroku-cli">Heroku cli</a> 建立能與 <a href="https://github.com/">Github</a> 倉儲同步的動態雲端網站.</p>
-<h4>在 Heroku 登記一個帳號</h4>
-<p>利用電子郵箱, 在 <a href="https://www.heroku.com/">https://www.heroku.com/</a> 登記一個免費帳號, 在完成電子郵箱驗證後, 即可進入 Dashboard 新增一個應用程式.  而該應用程式名稱必須具備唯一性, 因為完成後, 即可建立 "應用程式名稱".herokuapp.com 網站.</p>
-<p>接著進入該應用程式對應的 Settings 頁面, 可以查詢該應用程式的 git 倉儲對應 URL, 以及應用程式的網站名稱.</p>
-<p>接下來, 則必須在可攜程式系統中配置 <a href="https://devcenter.heroku.com/articles/heroku-cli">Heroku cli</a> 環境, 以便利用 heroku login, heroku logs 等指令, 登入 <a href="https://www.heroku.com/">Heroku</a> 系統, 取得 git clone 與 push 或 pull 權限.</p>
-<p>但是在此處, 隨後將在應用程式對應的 Deploy, 以 auto deploy 的自動部署, 讓特定的 Github repository 與 <a href="https://www.heroku.com/">Heroku</a> 的應用程式倉儲自動同步, 多人協同下的 Github 倉儲一旦改版, <a href="https://www.heroku.com/">Heroku</a> 動態網站將會自動保持同步.</p>
-<h4>新增可攜 Heroku cli 客戶端</h4>
-<p>下載 Heroku cli 可攜客戶端: <a href="https://drive.google.com/open?id=1mF84E-eskZTEa-blnrfT1m1JzbJ_1W77">heroku/7.18.9 win32-x64 node-v11.1.0</a></p>
-<p>將檔案在 y:\ 中解開壓縮後, 修改 path 設定, 納入 %Disk%:\heroku\bin, 以便在隨身系統中執行 heroku cli 指令.</p>
-<h4>利用 runtime.txt 指定 Python 版本</h4>
-<p>runtime.txt 指定 Python 執行版本:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">python-3.7.1</pre>
-<h4>利用 Procfile 指定啟動程式物件</h4>
-<p>Procfile 宣告由 flaskapp.py 中的 app 執行動態程式:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">web gunicorn flaskapp:app</pre>
-<h4>利用 requirements.txt 安裝所需模組</h4>
-<p>requirements.txt 宣告執行動態程式所需要安裝的模組:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">Flask==1.0.2
-gunicorn==19.7.1
-Jinja2==2.10
-MarkupSafe==1.0
-Werkzeug==0.14.1
-beautifulsoup4==4.6.0</pre>
-<h4>在 Heroku Deploy 頁面設定與 Github 倉儲自動同步</h4>
-<p><img alt="" height="275" src="/images/heroku_auto_deploy_with_github.png" width="600"/></p>
-<p>設定完成後的動態網頁: <a href="http://cp2018-bgx.herokuapp.com/">http://cp2018-bgx.herokuapp.com/</a> </p>
-<p>靜態網頁: <a href="https://mdecp2018.github.io/finalproject-bgx">https://mdecp2018.github.io/finalproject-bgx</a> </p>
-<p>可用於多人協同的 Github 倉儲: <a href="https://github.com/mdecp2018/finalproject-bgx">https://github.com/mdecp2018/finalproject-bgx</a> </p>
-<h1>Python 程式</h1>
-<h4>從基本語法到 GUI 程式</h4>
-<p><a href="https://pythonspot.com/">https://pythonspot.com/</a> </p>
-<p>整理 <a href="https://www.cs.cmu.edu/~112/schedule.html">https://www.cs.cmu.edu/~112/schedule.html</a> 中的 內容.</p>
-<h4>結合既有 C/C++ 程式</h4>
-<p>從 <a href="http://www.swig.org/">SWIG</a> 到 <a href="https://github.com/StatisKit/AutoWIG">AutoWIG</a>, 使用者可以將既有的 C/C++ 程式庫轉成可為 Python 程式呼叫的動態連結程式庫.</p>
-<p>也可以利用 <a href="https://cython.org/">Cython</a> 技術提升 Python 程式效能.</p>
-<p><a href="http://www.swig.org/">SWIG</a> 範例:</p>
-<p><a href="https://github.com/StatisKit/AutoWIG">AutoWIG</a> 介紹:</p>
-<p><a href="/downloads/AutoWIG%20- Automatic Generation of Python Bindings for C++ Libraries.pdf">AutoWIG: Automatic Generation of Python Bindings for C++ Libraries.pdf</a></p>
-<p><a href="/downloads/AutoWIG%20- Automatic Generation of Python Bindings for C++ Libraries2.pdf">AutoWIG - automatic generation of python bindings for C++ libraries2.pdf</a></p>
-<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/N4q_Vud77Hw" width="560"></iframe></p>
-<p><a href="https://cython.org/">Cython</a> 範例:</p>
-<p></p>
+<h1>組員介紹</h1>
+<p>
+40723142 (組長)詹昇澤 期中自評成績(60分)
+<p>
+40723132 (組員)陳乾豐 期中自評成績(68分)
+<p>
+40723126 (組員)張瑋庭 期中自評成績(65分)
+<p>
+40723122 (組員)施東勝 期中自評成績(65分)
+<p>
+40723149 (組員)鄭嘉文 期中自評成績(60分)
+<p>
+40723146 (組員)劉敬中 期中自評成績(60分)
+<p>
+<h1>專題研究</h1>
+<p>我們這次專題想研究的是如何將簡易的計算機語法寫入檔案中，</p>
+<p>再以GUI呈現並進行運作</p>
+<p></p><h1>研究方向</h1>
+<p>在我們這次的專題 因為我們需要會寫出一套簡單的計算機語言，
+<p>結合Python 內建的GUI 開發模組Tkinter將其做成一個視窗模式
+<p>所以我們的要講的部分有三種
+<h4>1.如何寫出簡易計算機的語言
+<h4>2.研究Tkinter運行方式
+<h4>3.將兩種結合 做出成果
+<p>
+<h1>簡易計算機語法</h1>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+<!-- for ggame -->
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-ui.1.12.1.min.js"></script>
+<script src="/static/pixi-3.0.5.min.js"></script>
+<script src="/static/buzz-1.2.1.js"></script>
+<!-- Cango 程式庫 -->
+<script src="/static/Cango-13v08-min.js"></script>
+<script src="/static/CangoAxes-4v01-min.js"></script>
+<script src="/static/gearUtils-05.js"></script>
 <script>
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/']});
@@ -124,30 +64,52 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<h4>開始練習 print() 用法, 並著手建立函式</h4>
+<p>下列是簡單的計算機程式
 <p><!-- 印出版次與關鍵字程式 --></p>
 <p>
 <script type="text/python3">
 from browser import document as doc
 import ace
-
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
 
-Ace.editor.setValue("""# 導入 sys 模組
-import sys
-# 導入 keyword 模組
-import keyword
+Ace.editor.setValue("""# 定義算式
 
-def helloWorld():
-    print("Hello World!")
+def add(x, y):
+   return x + y
+   
+def subtract(x, y):
+   return x - y
 
-helloWorld()
+def multiply(x, y):
+   return x * y
 
-# 利用 sys 模組中的 version_info 印出 Python 版次
-print("Python version: ", sys.version_info)
-# 利用 keyword 模組中的 kwlist 印出關鍵字
-print("Python keywords: ", keyword.kwlist)
+def divide(x, y):
+   return x / y
+
+#輸入數字及算式
+
+num1 = int(input("输入第一個數字: "))
+
+choice = input("输入你選擇的算式(+/-/*//):")
+
+num2 = int(input("输入第二個數字: "))
+
+#運算與結果
+
+if choice == '+':
+   print(num1,"+",num2,"=", add(num1,num2))
+
+elif choice == '-':
+   print(num1,"-",num2,"=", subtract(num1,num2))
+
+elif choice == '*':
+   print(num1,"*",num2,"=", multiply(num1,num2))
+
+elif choice == '/':
+   print(num1,"/",num2,"=", divide(num1,num2))
+else:
+   print("輸入錯誤")
 """)
 Ace.editor.scrollToRow(0)
 Ace.editor.gotoLine(0)
@@ -162,702 +124,12 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除</button></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<p><!-- ****************************** keyword start -->
-<script type="text/python3">
-from browser import document as doc
-# 導入位於 static 目錄下的 beditor.py 
-import beditor
-# 利用 beditor.py 中的 editor 類別建立案例, 對應到 kw1
-kw1 = beditor.editor("""# 導入 sys 模組
-import sys
-# 導入 keyword 模組
-import keyword
-
-# 利用 sys 模組中的 version_info 印出 Python 版次
-print("Python version: ", sys.version_info)
-# 利用 keyword 模組中的 kwlist 印出關鍵字
-print("Python keywords: ", keyword.kwlist)
-""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
-doc["keyword"].bind('click', kw1.prog)
-</script>
-</p>
-<p><!-- ****************************** keyword end --></p>
-<p><!-- ***************************** slide ex1 start --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import beditor
-Ex1 = beditor.editor("""# 導入 Ex1 原始碼
-a = 0
-def my_print(n, input_str):
-    print("以下將重覆列印 '", input_str + "' " + str(n) + "次")
-    for i in range(n):
-        print(i, input_str)
-
-my_print(5, "Hello World!")
-the_str = "開始學習 Python"
-num = input("請輸入要列印的次數!")
-my_print(int(num), the_str)
-a = a + 1
-print("(" + str(a) + ")", "_" * 25)
-
-def myfun():
-    yield 1
-    yield 2
-    yield 3
-
-for i in myfun():
-    print(i)
-
-x = iter(myfun())
-y = list(myfun())
-
-a = a + 1
-print("(" + str(a) + ")", "_" * 25)
-print(x.__next__())
-print(x.__next__())
-print(x.__next__())
-print(y)
-""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "ex1" 的按鈕點按時, 執行 Ex1 物件中的 prog 方法
-doc["ex1"].bind('click', Ex1.prog)
-</script>
-</p>
-<p><!-- ***************************** slide ex1 end --></p>
-<p><!-- ***************************** slide ex2 start --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import beditor
-Ex2 = beditor.editor("""# Python 的內建資料型別
-import math
-def f():
-    print("This is a user-defined function")
-    return 42
-
-print("Some basic types in Python:")
-print(type(2))           # int
-print(type(2.2))         # float
-print(type("2.2"))       # str  (string)
-print(type(2 < 2.2))     # bool (boolean)
-print(type(math))        # module
-print(type(math.tan))    # builtin_function_or_method ("function" in Brython)
-print(type(f))           # function (user-defined function)
-print(type(type(42)))    # type
-
-print("#####################################################")
-
-print("And some other types we will see later in the course...")
-print(type(Exception())) # Exception
-print(type(range(5)))    # range
-print(type([1,2,3]))     # list
-print(type((1,2,3)))     # tuple
-print(type({1,2}))       # set
-print(type({1:42}))      # dict (dictionary or map)
-print(type(2+3j))        # complex  (complex number) (we may not see this type)
-""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "ex2" 的按鈕點按時, 執行 Ex2 物件中的 prog 方法
-doc["ex2"].bind('click', Ex2.prog)
-</script>
-</p>
-<p><!-- ***************************** slide ex2 end --></p>
-<p><!-- ***************************** slide ex3 start --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import beditor
-Ex3 = beditor.editor("""# Python 的內建常數與函式
-# 內建常數
-print("Some builtin constants:")
-print(True)
-print(False)
-print(None)
-
-print("And some more constants in the math module:")
-import math
-print(math.pi)
-print(math.e)
-# 內建函式
-print("Type conversion functions:")
-print(bool(0))   # convert to boolean (True or False)
-print(float(42)) # convert to a floating point number
-print(int(2.8))  # convert to an integer (int)
-
-print("And some basic math functions:")
-print(abs(-5))   # absolute value
-print(max(2,3))  # return the max value
-print(min(2,3))  # return the min value
-print(pow(2,3))  # raise to the given power (pow(x,y) == x**y)
-print(round(2.354, 1)) # round with the given number of digits
-# other examples
-print(3 * 2)
-print(3 * "abc")
-print(3 + 2)
-print("abc" + "def")
-print(3 + "def")
-# Type Affect Semantics
-print(3 * 2)
-print(3 * "abc")
-print(3 + 2)
-print("abc" + "def")
-print(3 + "def")
-# Integer Division
-print("The / operator does 'normal' float division:")
-print(" 5/3  =", ( 5/3))
-print()
-print("The // operator does integer division:")
-print(" 5//3 =", ( 5//3))
-print(" 2//3 =", ( 2//3))
-print("-1//3 =", (-1//3))
-print("-4//3 =", (-4//3))
-# Modulus or Remainder Operator (%)
-print(" 6%3 =", ( 6%3))
-print(" 5%3 =", ( 5%3))
-print(" 2%3 =", ( 2%3))
-print(" 0%3 =", ( 0%3))
-print("-4%3 =", (-4%3))
-print(" 3%0 =", ( 3%0))
-# Verify that (a%b) is equivalent to (a-(a//b)*b)
-def mod(a, b):
-  return a - (a//b)*b
-print(41%14, mod(41,14))
-print(14%41, mod(14,41))
-print(-32%9, mod(-32,9))
-print(32%-9, mod(32,-9))
-# Operator Order (Precedence and Associativity)
-print("Precedence:")
-print(2+3*4)  # prints 14, not 20
-print(5+4%3)  # prints  6, not 0 (% has same precedence as *, /, and //)
-print(2**3*4) # prints 32, not 4096 (** has higher precedence than *, /, //, and %)
-
-print()
-
-print("Associativity:")
-print(5-4-3)   # prints -2, not 4 (- associates left-to-right)
-print(4**3**2) # prints 262144, not 4096 (** associates right-to-left)
-# Approximate Values of Floating-Point Numbers
-print(0.1 + 0.1 == 0.2)        # True, but...
-print(0.1 + 0.1 + 0.1 == 0.3)  # False!
-print(0.1 + 0.1 + 0.1)         # prints 0.30000000000000004 (uh oh)
-print((0.1 + 0.1 + 0.1) - 0.3) # prints 5.55111512313e-17 (tiny, but non-zero!)
-# Equality Testing with math.isclose
-print("The problem....")
-d1 = 0.1 + 0.1 + 0.1
-d2 = 0.3
-print(d1 == d2)                # False (never use == with floats!)
-
-print()
-print("The solution...")
-import math
-print(math.isclose(d1, d2))  # True!
-# math.isclose checks if the two numbers are ALMOST equal, within a small error
-# Short-Circuit Evaluation
-def yes():
-    return True
-
-def no():
-    return False
-
-def crash():
-    return 1/0 # crashes!
-
-print(no() and crash()) # Works!
-print(crash() and no()) # Crashes!
-print (yes() and crash()) # Never runs (due to crash), but would also crash (without short-circuiting)
-# Or operator
-def yes():
-    return True
-
-def no():
-    return False
-
-def crash():
-    return 1/0 # crashes!
-
-print(yes() or crash()) # Works!
-print(crash() or yes()) # Crashes!
-print(no() or crash())  # Never runs (due to crash), but would also crash (without short-circuiting)
-# more examples
-def isPositive(n):
-    result = (n > 0)
-    print("isPositive(",n,") =", result)
-    return result
-
-def isEven(n):
-    result = (n % 2 == 0)
-    print("isEven(",n,") =", result)
-    return result
-
-print("Test 1: isEven(-4) and isPositive(-4))")
-print(isEven(-4) and isPositive(-4)) # Calls both functions
-print("----------")
-print("Test 2: isEven(-3) and isPositive(-3)")
-print(isEven(-3) and isPositive(-3)) # Calls only one function!
-# type vs isinstance
-# Both type and isinstance can be used to type-check
-# In general, (isinstance(x, T)) will be more robust than (type(x) == T)
-
-print(type("abc") == str)
-print(isinstance("abc", str))
-
-# We'll see better reasons for this when we cover OOP + inheritance later
-# in the course.  For now, here is one reason:  say you wanted to check
-# if a value is any kind of number (int, float, complex, etc). 
-# You could do:
-
-def isNumber(x):
-    return ((type(x) == int) or
-            (type(x) == float)) # are we sure this is ALL kinds of numbers?
-
-print(isNumber(1), isNumber(1.1), isNumber(1+2j), isNumber("wow"))
-
-# But this is cleaner, and works for all kinds of numbers, including
-# complex numbers for example:
-
-import numbers
-def isNumber(x):
-    return isinstance(x, numbers.Number) # works for any kind of number
-
-print(isNumber(1), isNumber(1.1), isNumber(1+2j), isNumber("wow"))
-""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "ex3" 的按鈕點按時, 執行 Ex3 物件中的 prog 方法
-doc["ex3"].bind('click', Ex3.prog)
-</script>
-</p>
-<p><!-- ***************************** slide ex3 end --></p>
-<p><!-- ***************************** slide ex4 start --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import beditor
-Ex4 = beditor.editor("""# Python 函式
-# Vocabulary
-x = 5
-def f(y, z):
-    result = x + y + z
-    return result
-print(f(1, 2)) # 8
-print(f(3, 4)) # 12
-
-# Vocabulary:
-#   variables: global vs. local
-#   statements vs. expressions
-#   function definitions vs. function calls
-#   parameters vs. arguments
-
-# Return Statements
-# Basic example
-
-def isPositive(x):
-    return (x > 0)
-
-print(isPositive(5))  # True
-print(isPositive(-5)) # False
-print(isPositive(0))  # False
-
-# Return ends the function immediately
-def isPositive(x):
-    print("Hello!")   # runs
-    return (x > 0)
-    print("Goodbye!") # does not run ("dead code")
-
-print(isPositive(5))  # prints Hello, then True
-
-# No return statement --> return None
-def f(x):
-    x + 42
-
-print(f(5)) # None
-
-def f2(x):
-    result = x + 42
-
-print(f2(5)) # None
-
-# Print versus Return
-# This is a common early mistake (confusing print and return):
-def cubed(x):
-    print(x**3) # Here is the error!
-
-cubed(2)          # seems to work!
-print(cubed(3))   # sort of works (but prints None, which is weird)
-print(2*cubed(4)) # Error!
-
-# Once again (correctly)
-def cubed2(x):
-    return (x**3) # That's better!
-
-cubed2(2)          # seems to be ignored (why?)
-print(cubed2(3))   # works!
-print(2*cubed2(4)) # works!
-
-# Different Parameter and Return Types
-def hypotenuse(a, b):
-    return ((a**2) + (b**2))**0.5
-
-print(hypotenuse(3, 4)) # 5.0 (not 5)
-print("---------------------")
-
-def xor(b1, b2):
-    return ((b1 and (not b2)) or (b2 and (not b1)))  # same as (b1 != b2)
-
-print(xor(True,  True))  # False
-print(xor(True,  False)) # True
-print(xor(False, True))  # True
-print(xor(False, False)) # False
-print("---------------------")
-
-def isPositive(n):
-    return (n > 0)
-
-print(isPositive(10))     # True
-print(isPositive(-1.234)) # False
-
-# Function Composition
-def f(w):
-    return 10*w
-
-def g(x, y):
-    return f(3*x) + y
-
-def h(z):
-    return f(g(z, f(z+1)))
-
-print(h(1)) # hint: try the "visualize" feature
-
-# Helper Functions 
-def onesDigit(n):
-    return n%10
-
-def largerOnesDigit(x, y):
-    return max(onesDigit(x), onesDigit(y))
-
-print(largerOnesDigit(134, 672)) # 4
-print(largerOnesDigit(132, 674)) # Still 4
-
-# Test Functions
-# A broken test function
-def onesDigit(n):
-    return n%10
-
-def testOnesDigit():
-    print("Testing onesDigit()...", end="")
-    assert(onesDigit(5) == 5)
-    assert(onesDigit(123) == 3)
-    assert(onesDigit(100) == 0)
-    assert(onesDigit(999) == 9)
-    print("Passed!")
-
-testOnesDigit() # Passed!  Why is this bad?
-
-# A better version
-def onesDigit2(n):
-    return n%10
-
-def testOnesDigit2():
-    print("Testing onesDigit()...", end="")
-    assert(onesDigit2(5) == 5)
-    assert(onesDigit2(123) == 3)
-    assert(onesDigit2(100) == 0)
-    assert(onesDigit2(999) == 9)
-    assert(onesDigit2(-123) == 3) # Added this test
-    print("Passed!")
-
-testOnesDigit2() # Crashed!  So the test function worked!
-
-# Local Variable Scope
-def f(x):
-    print("In f, x =", x)
-    x += 5
-    return x
-
-def g(x):
-    return f(x*2) + f(x*3)
-
-print(g(2))
-
-# Another example
-def f(x):
-    print("In f, x =", x)
-    x += 7
-    return round(x / 3)
-
-def g(x):
-    x *= 10
-    return 2 * f(x)
-
-def h(x):
-    x += 3
-    return f(x+4) + g(x)
-
-print(h(f(1)))
-
-# Global Variable Scope
-# In general, you should avoid using global variables.
-# You will even lose style points if you use them!
-# Still, you need to understand how they work, since others
-# will use them, and there may also be some very few occasions
-# where you should use them, too!
-
-g = 100
-
-def f(x):
-    return x + g
-
-print(f(5)) # 105
-print(f(6)) # 106
-print(g)    # 100
-
-# Another exampl
-g = 100
-
-def f(x):
-    # If we modify a global variable, we must declare it as global.
-    # Otherwise, Python will assume it is a local variable.
-    global g
-    g += 1
-    return x + g
-
-print(f(5)) # 106
-print(f(6)) # 108
-print(g)    # 102
-
-# Default arguments
-# Sometimes, a function has a parameter that has a natural default
-# We can specify that default value in the function definition,
-# then choose whether or not to include it in the function call.
-
-def f(x, y=10):
-    return x + y
-
-print(f(5))   # 15
-print(f(5,1)) # 6
-""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
-# id 為 "ex3" 的按鈕點按時, 執行 Ex3 物件中的 prog 方法
-doc["ex4"].bind('click', Ex4.prog)
-</script>
-</p>
-<p><!-- ***************************** slide ex4 end --></p>
-<p><button id="keyword">Keyword</button><button id="ex1">Ex1</button><button id="ex2">Ex2</button><button id="ex3">Ex3</button><button id="ex4">Ex4</button></p><h2>靜態網站範例</h2>
-<h4>Brython</h4>
-<p style="padding-left: 30px;"><a href="https://groups.google.com/forum/#!forum/brython">https://groups.google.com/forum/#!forum/brython</a> </p>
-<p><a href="https://github.com/mdecourse/webgame">https://github.com/mdecourse/webgame</a> </p>
-<p><a href="http://mde.tw/webgame/spacewar.html">http://mde.tw/webgame/spacewar.html</a> </p>
-<p><a href="http://mde.tw/reeborg2016/reeborg.html?lang=en&amp;mode=python">http://mde.tw/reeborg2016/reeborg.html?lang=en&amp;mode=python</a> </p><h2>動態網站範例</h2>
-<p><a href="https://github.com/mdecourse/wcms-scrum1">https://github.com/mdecourse/wcms-scrum1</a> </p>
-<p>從計算機程式 (Computer Programming) 到電腦輔助機械設計(Computer Aided Mechanical Design)</p>
-<p>猜數字遊戲: <a href="https://wcms-scrum1.herokuapp.com/">https://wcms-scrum1.herokuapp.com/</a> </p>
-<p>2D 國旗繪圖: <a href="https://wcms-scrum1.herokuapp.com/drawflag">https://wcms-scrum1.herokuapp.com/drawflag</a> </p>
-<p>2D 五芒星繪圖: <a href="https://wcms-scrum1.herokuapp.com/drawstar">https://wcms-scrum1.herokuapp.com/drawstar</a> </p>
-<p>2D 曲線繪圖加滑鼠操作: <a href="https://wcms-scrum1.herokuapp.com/drag">https://wcms-scrum1.herokuapp.com/drag</a> </p>
-<p>正齒輪齒面寬設計: <a href="https://wcms-scrum1.herokuapp.com/gear_index">https://wcms-scrum1.herokuapp.com/gear_index</a> </p><h2>GUI 程式範例</h2>
-<h4>Leo Editor</h4>
-<p style="padding-left: 30px;"><a href="https://groups.google.com/forum/#!forum/leo-editor">https://groups.google.com/forum/#!forum/leo-editor</a> </p>
-<p style="padding-left: 30px;"><a href="https://github.com/flexxui/pscript">https://github.com/flexxui/pscript</a> </p>
-<p style="padding-left: 30px;"><a href="https://github.com/flexxui/flexx">https://github.com/flexxui/flexx</a> </p>
-<p><a href="https://github.com/kmolab/pymcadp">https://github.com/kmolab/pymcadp</a> </p>
-<p><a href="https://github.com/goldsborough/Writer-Tutorial">https://github.com/goldsborough/Writer-Tutorial</a>  (<a href="https://www.binpress.com/building-text-editor-pyqt-1/">https://www.binpress.com/building-text-editor-pyqt-1/</a>) </p>
-<p><a href="https://github.com/mfitzp/15-minute-apps">https://github.com/mfitzp/15-minute-apps</a> </p>
-<p><a href="https://github.com/Ultimaker/Cura">https://github.com/Ultimaker/Cura</a> </p>
-<p><a href="https://github.com/maicss/PyQt5-Chinese-tutoral">https://github.com/maicss/PyQt5-Chinese-tutoral</a> </p>
-<p><a href="https://github.com/skinex/CRUD-SQLite-">https://github.com/skinex/CRUD-SQLite-</a> </p>
-<p><a href="https://github.com/LewisTian/PyQt5-Apps">https://github.com/LewisTian/PyQt5-Apps</a> </p>
-<h3>GUI 程式碼</h3>
-<h4>擷取網站 html 檔案</h4>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def render(url):
-    """Fully render HTML, JavaScript and all."""
-
-    import sys
-    from PyQt5.QtCore import QEventLoop,QUrl
-    from PyQt5.QtWidgets import QApplication
-    from PyQt5.QtWebEngineWidgets import QWebEngineView
-
-    class Render(QWebEngineView):
-        def __init__(self, url):
-            self.html = None
-            self.app = QApplication(sys.argv)
-            QWebEngineView.__init__(self)
-            self.loadFinished.connect(self._loadFinished)
-            self.load(QUrl(url))
-            while self.html is None:
-                self.app.processEvents(QEventLoop.ExcludeUserInputEvents | QEventLoop.ExcludeSocketNotifiers | QEventLoop.WaitForMoreEvents)
-            self.app.quit()
-
-        def _callable(self, data):
-            self.html = data
-
-        def _loadFinished(self, result):
-            self.page().toHtml(self._callable)
-
-    return Render(url).html
-
-dummy_url = "http://mde.tw/"
-print(render(dummy_url))</pre>
-<h4>顯示網站內容</h4>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># coding: utf-8
-
-import sys
-import os
-
-from PyQt5 import (
-    QtCore, 
-    QtWidgets, 
-    QtWebEngineWidgets
-)
-
-app = QtWidgets.QApplication(sys.argv)
-view = QtWebEngineWidgets.QWebEngineView()
-
-'''
-view.load(QtCore.QUrl().fromLocalFile(
-    os.path.split(os.path.abspath(__file__))[0]+r'\html\test.html'
-))
-'''
-view.load(QtCore.QUrl("http://mde.tw"))
-
-view.show()
-sys.exit(app.exec())</pre>
-<p></p><h1>parse_content 範例</h1>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
-import bs4
-
-def _remove_h123_attrs(soup):
-    tag_order = 0
-    for tag in soup.find_all(['h1', 'h2', 'h3']):
-        # 假如標註內容沒有字串
-        #if len(tag.text) == 0:
-        if len(tag.contents) ==0:
-            # 且該標註為排序第一
-            if tag_order == 0:
-                tag.string = "First"
-            else:
-                # 若該標註非排序第一, 則移除無內容的標題標註
-                tag.extract()
-        # 針對單一元件的標題標註
-        elif len(tag.contents) == 1:
-            # 若內容非為純文字, 表示內容為其他標註物件
-            if tag.get_text() == "":
-                # 且該標註為排序第一
-                if tag_order == 0:
-                    # 在最前方插入標題
-                    tag.insert_before(soup.new_tag('h1', 'First'))
-                else:
-                    # 移除 h1, h2 或 h3 標註, 只留下內容
-                    tag.replaceWithChildren()
-            # 表示單一元件的標題標註, 且標題為單一字串者
-            else:
-                # 判定若其排序第一, 則將 tag.name 為 h2 或 h3 者換為 h1
-                if tag_order == 0:
-                    tag.name = "h1"
-            # 針對其餘單一字串內容的標註, 則保持原樣
-        # 針對內容一個以上的標題標註
-        #elif len(tag.contents) &gt; 1:
-        else:
-            # 假如該標註內容長度大於 1
-            # 且該標註為排序第一
-            if tag_order == 0:
-                # 先移除 h1, h2 或 h3 標註, 只留下內容
-                #tag.replaceWithChildren()
-                # 在最前方插入標題
-                tag.insert_before(soup.new_tag('h1', 'First'))
-            else:
-                # 只保留標題內容,  去除 h1, h2 或 h3 標註
-                # 為了與前面的內文區隔, 先在最前面插入 br 標註
-                tag.insert_before(soup.new_tag('br'))
-                # 再移除非排序第一的 h1, h2 或 h3 標註, 只留下內容
-                tag.replaceWithChildren()
-        tag_order = tag_order + 1
-
-    return soup
-
-def file_get_contents(filename):
-    # open file in utf-8 and return file content
-    with open(filename, encoding="utf-8") as file:
-        return file.read()
-
-def parse_content():
-    """use bs4 and re module functions to parse content.htm"""
-    config_dir = "./"
-    # if no content.htm, generate a head 1 and content 1 file
-    if not os.path.isfile(config_dir+"content.htm"):
-        # create content.htm if there is no content.htm
-        File = open(config_dir + "content.htm", "w", encoding="utf-8")
-        File.write("&lt;h1&gt;head 1&lt;/h1&gt;content 1")
-        File.close()
-    subject = file_get_contents(config_dir+"content.htm")
-    # deal with content without content
-    if subject == "":
-        # create content.htm if there is no content.htm
-        File = open(config_dir + "content.htm", "w", encoding="utf-8")
-        File.write("&lt;h1&gt;head 1&lt;/h1&gt;content 1")
-        File.close()
-        subject = "&lt;h1&gt;head 1&lt;/h1&gt;content 1"
-    # initialize the return lists
-    head_list = []
-    level_list = []
-    page_list = []
-    # make the soup out of the html content
-    soup = bs4.BeautifulSoup(subject, 'html.parser')
-    # 嘗試解讀各種情況下的標題
-    soup = _remove_h123_attrs(soup)
-    # 改寫 content.htm 後重新取 subject
-    with open(config_dir + "content.htm", "wb") as f:
-        f.write(soup.encode("utf-8"))
-    subject = file_get_contents(config_dir+"content.htm")
-    # get all h1, h2, h3 tags into list
-    htag= soup.find_all(['h1', 'h2', 'h3'])
-    n = len(htag)
-    # get the page content to split subject using each h tag
-    temp_data = subject.split(str(htag[0]))
-    if len(temp_data) &gt; 2:
-        subject = str(htag[0]).join(temp_data[1:])
-    else:
-        subject = temp_data[1]
-    if n &gt;1:
-            # i from 1 to i-1
-            for i in range(1, len(htag)):
-                head_list.append(htag[i-1].text.strip())
-                # use name attribute of h* tag to get h1, h2 or h3
-                # the number of h1, h2 or h3 is the level of page menu
-                level_list.append(htag[i-1].name[1])
-                temp_data = subject.split(str(htag[i]))
-                if len(temp_data) &gt; 2:
-                    subject = str(htag[i]).join(temp_data[1:])
-                else:
-                    subject = temp_data[1]
-                # cut the other page content out of htag from 1 to i-1
-                cut = temp_data[0]
-                # add the page content
-                page_list.append(cut)
-    # last i
-    # add the last page title
-    head_list.append(htag[n-1].text.strip())
-    # add the last level
-    level_list.append(htag[n-1].name[1])
-    temp_data = subject.split(str(htag[n-1]))
-    # the last subject
-    subject = temp_data[0]
-    # cut the last page content out
-    cut = temp_data[0]
-    # the last page content
-    page_list.append(cut)
-    return head_list, level_list, page_list
-
-print(parse_content())</pre>
-<h1>Onshape</h1>
-<p><a href="https://cad.onshape.com/FsDoc/">https://cad.onshape.com/FsDoc/</a> </p>
-<p><a href="https://www.onshape.com/features/custom-features">https://www.onshape.com/features/custom-features</a> </p>
-<p><a href="http://cadlab.mde.tw/post/tag/featurescript.html">http://cadlab.mde.tw/post/tag/featurescript.html</a> </p>
-<p><a href="http://cadlab.mde.tw/post/onshape-featurescript-cheng-shi-yu-yan.html">http://cadlab.mde.tw/post/onshape-featurescript-cheng-shi-yu-yan.html</a> </p>
-<p><a href="https://github.com/dcowden/featurescript">https://github.com/dcowden/featurescript</a> </p>
-<h1>電子書</h1>
-<p>Planning Algorithm: <a href="http://planning.cs.uiuc.edu/">http://planning.cs.uiuc.edu/</a> </p>
-<p><a href="/downloads/planning_algorithm.pdf">planning_algorithm.pdf</a></p>
-<p><a href="/downloads/basics_robotics.pdf">basics of robotics.pdf</a></p>
-<p><a href="/downloads/elements_of_robotics.pdf">elements of robotics.pdf</a></p>
-<p><a href="/downloads/next_generation_robotics.pdf">next generation robotics.pdf</a></p>
-<p>modern robotics: <a href="http://hades.mech.northwestern.edu/index.php/Modern_Robotics">http://hades.mech.northwestern.edu/index.php/Modern_Robotics</a> </p>
-<p></p>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除</button><button onclick="window.location.reload()">Reload</button></p>
+<div style="width: 300px; height: 100px;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 285px; height: 69px;"></textarea></div>
+<br/>
+<h1>Tkinter</h1>
+<p>GUI 的意思是 圖形使用者介面</p>
+<p>我們要使用PYTHON將計算機以GUI的方式呈現</p>
+<p>而我們選擇Tkinter來參考並設計GUI</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DVBrpQVKBeQ" width="560"></iframe></p><h1>成果</h1>
+<script type="text/python3"></script></p></p></h4></h4></h4></p></p></p></p></p></p></p></p></p></p>
