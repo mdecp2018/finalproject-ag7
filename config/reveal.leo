@@ -21,22 +21,52 @@
 <v t="leo.20180827201621.6" a="E"><vh>body</vh>
 <v t="leo.20180827201621.7" a="E"><vh>reveal div</vh>
 <v t="leo.20180827201621.8" a="E"><vh>slides div</vh>
-<v t="leo.20180827201621.9" a="E"><vh>封面投影片</vh>
+<v t="leo.20180827201621.9"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20180827201621.11" a="E"><vh>快捷鍵</vh>
-<v t="leo.20180827201621.12"><vh>投影片快捷鍵</vh></v>
+<v t="leo.20180827201621.11" a="E"><vh>標題</vh>
+<v t="leo.20180827201621.12"><vh>0-1</vh></v>
 </v>
-<v t="leo.20180827201621.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180827201621.14" a="E"><vh>導入數學符號與方程式</vh>
-<v t="leo.20180827201621.15"><vh>LaTeX 格式方程式</vh></v>
+<v t="leo.20190111061214.1" a="E"><vh>何謂GUI?Tkinter?</vh>
+<v t="leo.20190111061214.2"><vh>0-3</vh></v>
 </v>
+<v t="leo.20180827201621.13"><vh>1-1</vh>
 <v t="leo.20180827201621.16" a="E"><vh>導入縮排程式碼</vh>
 <v t="leo.20180827201621.17"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20180827201621.18" a="E"><vh>導入影片</vh>
-<v t="leo.20180827201621.19"><vh>iframe 導入影片</vh></v>
 </v>
+<v t="leo.20190111061757.1"><vh>1-2</vh>
+<v t="leo.20190111061757.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111063657.1"><vh>1-3-1</vh>
+<v t="leo.20190111063755.1"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111063854.1" a="E"><vh>1-3-2</vh>
+<v t="leo.20190111063854.3"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111064357.1"><vh>1-3-3</vh>
+<v t="leo.20190111064357.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111064615.1"><vh>1-4-1</vh>
+<v t="leo.20190111064615.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111064937.1"><vh>1-4-2</vh>
+<v t="leo.20190111064937.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111065125.1" a="E"><vh>1-4-3</vh>
+<v t="leo.20190111065125.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111065544.1" a="E"><vh>1-5-1</vh>
+<v t="leo.20190111065544.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111065628.1"><vh>1-5-2</vh>
+<v t="leo.20190111065628.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111071029.1" a="E"><vh>1-5-3</vh>
+<v t="leo.20190111071029.2"><vh>引用程式碼</vh></v>
+</v>
+<v t="leo.20190111071107.1" a="E"><vh>F</vh>
+<v t="leo.20190111071107.2"><vh>引用程式碼</vh></v>
 </v>
 </v>
 </v>
@@ -127,12 +157,9 @@ vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.10">## 2018Fall 分組網際簡報
 
 ### 虎科大機械設計工程系
+## Finalproject-ag7
+## 第七組
 
-&lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
-&lt;/small&gt;
-
-[2018 Fall 分組網誌](./../blog/index.html)
 
 
 </t>
@@ -145,38 +172,28 @@ Created by [KMOLab](http://lab.kmol.info/)
 
 						
 </t>
-<t tx="leo.20180827201621.12"># 投影片快捷鍵
+<t tx="leo.20180827201621.12">## 研究專題-計算機
 
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
+研究方向 : 
+我們這次的專題 
+我們需要會寫出一套計算機語言
+結合Python 內建的GUI 開發模組Tkinter
+將其做成一個視窗模式
+所以我們的要講的部分有三種
+
+1.如何寫出簡易計算機的語言
+
+2.研究Tkinter運行方式
+
+3.將兩種結合 做出成果
+
+&lt;img alt= height="120" src="/images/0.png " width="200"/&gt;
 
 </t>
 <t tx="leo.20180827201621.13">&lt;section&gt;
 @others
 &lt;/section&gt;
 
-</t>
-<t tx="leo.20180827201621.14">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20180827201621.15"># 數學符號與方程式
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
 </t>
 <t tx="leo.20180827201621.16">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -189,48 +206,34 @@ $$I = \int \rho R^{2} dV$$
 
 						
 </t>
-<t tx="leo.20180827201621.17">## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
+<t tx="leo.20180827201621.17">## 1-1 計算機程式
+要理解計算機基本的程式，才可以帶入Tkinter運用
+所以我們寫出一套簡易的計算機
 ```
 @language python
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
+#輸入的數字及算式
 
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
+x=input("first number")
+choose = input("(+/-/*//):")
+y=input("second number")
+
+#選擇四個算式之一所產生的結果
+
+if choose == '+':
+   print(int(x),"+",int(y),"=", (int(x)+int(y)))
+
+elif choose == '-':
+   print(int(x),"-",int(y),"=", (int(x)-nt(y)))
+
+elif choose == '*':
+   print(int(x),"*",int(y),"=", (int(x)*int(y)))
+
+elif choose == '/':
+   print(int(x),"/",int(y),"=", (int(x)/int(y)))
+else:
+   print("輸入錯誤")
+
 ```
-</t>
-<t tx="leo.20180827201621.18">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20180827201621.19">## 使用 iframe 導入影片
-
-### 導入影片 template
-
-&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20180827201621.2"></t>
 <t tx="leo.20180827201621.3">@language xml
@@ -326,5 +329,467 @@ make.start()
 
 						
 </t>
+<t tx="leo.20190111061214.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190111061214.2">## 何謂GUI? Tkinter?
+GUI 的意思是 圖形使用者介面
+
+Tkinter 是使用python來設計視窗的模塊
+
+我們要使用PYTHON將
+計算機以GUI的方式呈現
+
+而我們選擇Tkinter來參考並設計GUI
+
+&lt;img alt= height="100" src="/images/T1.png " width="200"/&gt;
+</t>
+<t tx="leo.20190111061757.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111061757.2">## 1-2 開啟Tkinter
+我們將在這次講解如何簡單
+開啟Tkinter視窗
+```
+@language python
+from tkinter import *     
+
+NFU=Tk()  
+
+NFU.geometry("320x240")
+
+NFU.title("NFU") 
+
+label=Label(NFU, text="Hello World!")
+
+label.pack() 
+
+button=Button(NFU, text="OK")
+
+button.pack()
+
+NFU.mainloop()
+```
+</t>
+<t tx="leo.20190111063657.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111063755.1">## 1-3 Tkinter介面按鈕定義
+經過1-2的操作之後，我們發現Tkinter裡
+
+像是 標題(title)、標籤(Label)、按鈕(Button)
+
+都可以使其定義成特定的名稱，再將其導入
+
+我們將這個發現帶入專題
+
+想要做出一台計算機，
+
+計算機的按鈕是不是就可以用Tkinter設計出來?
+
+按下按鍵就可以輸入想要的數字?</t>
+<t tx="leo.20190111063854.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111063854.3">## 1-3-2 Tkinter介面按鈕定義
+```
+@language python 
+import sys
+from tkinter import *
+ 
+NFU=Tk()
+ 
+frame=Frame(NFU)
+frame.pack()
+ 
+NFU.title("calculator")
+ 
+#建立可供輸入的視窗
+num1=StringVar()
+ 
+topframe=Frame(NFU)
+topframe.pack(side=TOP)
+ 
+block=Entry(frame,textvariable=num1,bd=20,insertwidth=1,font=30)
+block.pack(side=TOP)
+ 
+#定義鍵盤輸入(後來加上)
+operator=""
+def clear():
+   block.delete(0,END)
+   return
+    
+def clickbut(numbers):
+    global operator
+    operator=operator+str(numbers)
+    num1.set(operator)
+ 
+#建立可輸入的按鍵設定
+ 
+#第一排
+frame=Frame(NFU)
+frame.pack(side=TOP)
+ 
+b1=Button(frame,padx=16,pady=16,bd=8,text="1",fg="black",command=lambda:clickbut(1))
+b1.pack(side=LEFT)
+b2=Button(frame,padx=16,pady=16,bd=8,text="2",fg="black",command=lambda:clickbut(2))
+b2.pack(side=LEFT)
+b3=Button(frame,padx=16,pady=16,bd=8,text="3",fg="black",command=lambda:clickbut(3))
+b3.pack(side=LEFT)
+b4=Button(frame,padx=16,pady=16,bd=8,text="+",fg="black")
+b4.pack(side=LEFT)
+ 
+#第二排
+secondframe=Frame(NFU)
+secondframe.pack(side=TOP)
+ 
+b1=Button(secondframe,padx=16,pady=16,bd=8,text="4",fg="black",command=lambda:clickbut(4))
+b1.pack(side=LEFT)
+b2=Button(secondframe,padx=16,pady=16,bd=8,text="5",fg="black",command=lambda:clickbut(5))
+b2.pack(side=LEFT)
+b3=Button(secondframe,padx=16,pady=16,bd=8,text="6",fg="black",command=lambda:clickbut(6))
+b3.pack(side=LEFT)
+b4=Button(secondframe,padx=16,pady=16,bd=8,text="-",fg="black")
+b4.pack(side=LEFT)
+ 
+#第三排
+thirdframe=Frame(NFU)
+thirdframe.pack(side=TOP)
+ 
+b1=Button(thirdframe,padx=16,pady=16,bd=8,text="7",fg="black",command=lambda:clickbut(7))
+b1.pack(side=LEFT)
+b2=Button(thirdframe,padx=16,pady=16,bd=8,text="8",fg="black",command=lambda:clickbut(8))
+b2.pack(side=LEFT)
+b3=Button(thirdframe,padx=16,pady=16,bd=8,text="9",fg="black",command=lambda:clickbut(9))
+b3.pack(side=LEFT)
+b4=Button(thirdframe,padx=16,pady=16,bd=8,text="*",fg="black")
+b4.pack(side=LEFT)
+ 
+#第四排
+fourthframe=Frame(NFU)
+fourthframe.pack(side=TOP)
+ 
+b1=Button(fourthframe,padx=16,pady=16,bd=8,text="0",fg="black",command=lambda:clickbut(0))
+b1.pack(side=LEFT)
+b2=Button(fourthframe,padx=16,pady=16,bd=8,text=".",fg="black",)
+b2.pack(side=LEFT)
+b3=Button(fourthframe,padx=16,pady=16,bd=8,text="C",fg="black",command=clear)
+b3.pack(side=LEFT)
+b4=Button(fourthframe,padx=16,pady=16,bd=8,text="/",fg="black")
+b4.pack(side=LEFT)
+
+NFU.mainloop()
+```
+</t>
+<t tx="leo.20190111064357.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111064357.2">## 1-3-3 我想睡了
+簡單來說
+
+我們將視窗及按鈕設定好
+
+再定義按鈕按下所產生的數字、符號
+
+但是計算機還沒有會計算的功能
+
+所以我們必須進行下一步!!!
+</t>
+<t tx="leo.20190111064615.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111064615.2">## 1-4-1 將兩種結合
+我們了解了計算機的程式運作、Tkinter的簡易操作
+
+最後我們要將算式符號(加+ 、減 - 、乘 * 、 除/ )定義
+
+使程式可成功運行</t>
+<t tx="leo.20190111064937.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111064937.2">## 1-4-2 Tkinter介面按鈕定義
+我們定義等號來算出結果
+```
+@language python 
+#定義等號算出結果
+def equal():
+     global operator
+     add=str(eval(operator))
+     num1.set(add)
+     operator=''
+def equal():
+     global operator
+     sub=str(eval(operator))
+     num1.set(sub)
+     operator=''     
+def equal():
+     global operator
+     mul=str(eval(operator))
+     num1.set(mul)
+     operator=''
+def equal():
+     global operator
+     div=str(eval(operator))
+     num1.set(div)
+     operator=''
+```
+
+</t>
+<t tx="leo.20190111065125.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111065125.2">## 1-4-2 Tkinter介面按鈕定義
+再將等號按鈕定義
+修改成對應前面的程式
+```
+@language python 
+#修改部分
+b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
+b1.pack(side=LEFT)
+```</t>
+<t tx="leo.20190111065544.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111065544.2">## 1-5-1 結果
+最終，我們完成了簡易計算機
+
+而這計算機功能卻不是非常完整，
+
+它少了許多功能，像是括號、正負號.....等
+
+功能也有點缺陷，
+
+像是清除按鈕只能在按下等號之後使用，
+
+正數跟負數會衝突...等
+
+再來希望這程式可以像老師將Python-Course裡的語法一樣導入到網頁上並執行</t>
+<t tx="leo.20190111065628.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111065628.2">## 1-5-2  成品圖片
+&lt;img alt= height="200" src="/images/T-3.JPG " width="300"/&gt;</t>
+<t tx="leo.20190111071029.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111071029.2">## 1-5-3 完整計算機程式
+```
+import sys
+from tkinter import *
+
+NFU=Tk()
+
+frame=Frame(NFU)
+frame.pack()
+
+NFU.title("calculator")
+
+#建立可供輸入的視窗
+num1=StringVar()
+
+topframe=Frame(NFU)
+topframe.pack(side=TOP)
+
+block=Entry(frame,textvariable=num1,bd=20,insertwidth=1,font=30)
+block.pack(side=TOP)
+
+#定義鍵盤輸入
+
+operator=""
+def clear():
+   block.delete(0,END)
+   return
+   
+def clickbut(numbers):
+    global operator
+    operator=operator+str(numbers)
+    num1.set(operator)
+    
+#定義等號算出結果
+def equal():
+     global operator
+     add=str(eval(operator))
+     num1.set(add)
+     operator=''
+def equal():
+     global operator
+     sub=str(eval(operator))
+     num1.set(sub)
+     operator=''     
+def equal():
+     global operator
+     mul=str(eval(operator))
+     num1.set(mul)
+     operator=''
+def equal():
+     global operator
+     div=str(eval(operator))
+     num1.set(div)
+     operator=''    
+
+#建立可輸入的按鍵設定
+
+#第一排
+frame=Frame(NFU)
+frame.pack(side=TOP)
+
+b1=Button(frame,padx=16,pady=16,bd=8,text="1",fg="black",command=lambda:clickbut(1))
+b1.pack(side=LEFT)
+b2=Button(frame,padx=16,pady=16,bd=8,text="2",fg="black",command=lambda:clickbut(2))
+b2.pack(side=LEFT)
+b3=Button(frame,padx=16,pady=16,bd=8,text="3",fg="black",command=lambda:clickbut(3))
+b3.pack(side=LEFT)
+b4=Button(frame,padx=16,pady=16,bd=8,text="+",fg="black",command=lambda:clickbut("+"))
+b4.pack(side=LEFT)
+
+#第二排
+secondframe=Frame(NFU)
+secondframe.pack(side=TOP)
+
+b1=Button(secondframe,padx=16,pady=16,bd=8,text="4",fg="black",command=lambda:clickbut(4))
+b1.pack(side=LEFT)
+b2=Button(secondframe,padx=16,pady=16,bd=8,text="5",fg="black",command=lambda:clickbut(5))
+b2.pack(side=LEFT)
+b3=Button(secondframe,padx=16,pady=16,bd=8,text="6",fg="black",command=lambda:clickbut(6))
+b3.pack(side=LEFT)
+b4=Button(secondframe,padx=16,pady=16,bd=8,text="-",fg="black",command=lambda:clickbut("-"))
+b4.pack(side=LEFT)
+
+#第三排
+thirdframe=Frame(NFU)
+thirdframe.pack(side=TOP)
+
+b1=Button(thirdframe,padx=16,pady=16,bd=8,text="7",fg="black",command=lambda:clickbut(7))
+b1.pack(side=LEFT)
+b2=Button(thirdframe,padx=16,pady=16,bd=8,text="8",fg="black",command=lambda:clickbut(8))
+b2.pack(side=LEFT)
+b3=Button(thirdframe,padx=16,pady=16,bd=8,text="9",fg="black",command=lambda:clickbut(9))
+b3.pack(side=LEFT)
+b4=Button(thirdframe,padx=16,pady=16,bd=8,text="*",fg="black",command=lambda:clickbut("*"))
+b4.pack(side=LEFT)
+
+#第四排
+fourthframe=Frame(NFU)
+fourthframe.pack(side=TOP)
+
+b1=Button(fourthframe,padx=16,pady=16,bd=8,text="0",fg="black",command=lambda:clickbut(0))
+b1.pack(side=LEFT)
+b2=Button(fourthframe,padx=16,pady=16,bd=8,text=".",fg="black",command=lambda:clickbut("."))
+b2.pack(side=LEFT)
+b3=Button(fourthframe,padx=16,pady=16,bd=8,text="C",fg="black",command=clear)
+b3.pack(side=LEFT)
+b4=Button(fourthframe,padx=16,pady=16,bd=8,text="/",fg="black",command=lambda:clickbut("/"))
+b4.pack(side=LEFT)
+
+
+#第五排
+fivthframe=Frame(NFU)
+fivthframe.pack(side=TOP)
+b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
+b1.pack(side=LEFT)
+
+
+
+NFU.mainloop()
+```</t>
+<t tx="leo.20190111071107.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20190111071107.2">第七組報告到此
+謝謝大家</t>
 </tnodes>
 </leo_file>
