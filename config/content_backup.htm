@@ -110,11 +110,12 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <p>而我們選擇Tkinter來參考並設計GUI</p>
 <p></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p>
-<h1>影片</h1>
-<h2>計算機程式</h2>
-<p>我們將使用PYTHON寫出一套簡易的計算機</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">
-x=input("first number")       輸入你要的數字1
+<h1>研究過程</h1>
+<h2>1-1 計算機程式</h2>
+<p>我們要理解計算機基本的程式</p>
+<p>才可以帶入Tkinter設計裡</p>
+<p>所以我們將使用PYTHON寫出一套簡易的計算機</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x=input("first number")       輸入你要的數字1
 choose=input("+,-,*,/")       輸入你要的算式
 y=input("second number")     輸入你要的數字2
 
@@ -132,7 +133,7 @@ elif choose == '*' :
      
 elif choose == '/' :
      print(int(x),"/",int(y),"=",(int(x)/int(y)))</pre>
-<p></p><h2>Tkinter 1-1</h2>
+<p></p><h2>1-2 開啟Tkinter</h2>
 <p>我們將在這次的影片中講解如何簡單開啟Tkinter視窗</p>
 <p><span>    </span><span>     </span></p>
 <table border="1" style="border-collapse: collapse; width: 91.3114%; height: 47px;">
@@ -164,14 +165,110 @@ elif choose == '/' :
 </tbody>
 </table>
 <p></p>
-<p><span> </span></p>
-<h2>Tkinter 1-2</h2>
+<p><span> </span></p><h2>1-3 Tkinter介面定義 </h2>
 <p>經過1-1的操作之後，我們發現Tkinter裡像是 標題(title)、標籤(Label)、按鈕(Button)</p>
 <p>都可以使其定義成特定的名稱，再將其導入</p>
 <p>我們將這個發現帶入專題</p>
-<p>我們想要做 出一台計算機，計算機裡的按鈕就是不是可以用Tkinter設計出來，</p>
-<p>按下按鍵就可以輸入想要的數字?</p>
+<p>想要做出一台計算機，計算機的按鈕是不是可以用Tkinter設計出來?</p>
+<p>並按下按鍵就可以輸入想要的數字?</p>
 <p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
 <p><span> </span></p>
-<p><span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
+from tkinter import *
+
+NFU=Tk()
+
+frame=Frame(NFU)
+frame.pack()
+
+NFU.title("calculator")
+
+#建立可供輸入的視窗
+num1=StringVar()
+
+topframe=Frame(NFU)
+topframe.pack(side=TOP)
+
+block=Entry(frame,textvariable=num1,bd=20,insertwidth=1,font=30)
+block.pack(side=TOP)
+
+#定義鍵盤輸入
+operator=""
+def clear():
+   block.delete(0,END)
+   return
+   
+def clickbut(numbers):
+    global operator
+    operator=operator+str(numbers)
+    num1.set(operator)
+
+#建立可輸入的按鍵設定
+
+#第一排
+frame=Frame(NFU)
+frame.pack(side=TOP)
+
+b1=Button(frame,padx=16,pady=16,bd=8,text="1",fg="black",command=lambda:clickbut(1))
+b1.pack(side=LEFT)
+b2=Button(frame,padx=16,pady=16,bd=8,text="2",fg="black",command=lambda:clickbut(2))
+b2.pack(side=LEFT)
+b3=Button(frame,padx=16,pady=16,bd=8,text="3",fg="black",command=lambda:clickbut(3))
+b3.pack(side=LEFT)
+b4=Button(frame,padx=16,pady=16,bd=8,text="+",fg="black")
+b4.pack(side=LEFT)
+
+#第二排
+secondframe=Frame(NFU)
+secondframe.pack(side=TOP)
+
+b1=Button(secondframe,padx=16,pady=16,bd=8,text="4",fg="black")
+b1.pack(side=LEFT)
+b2=Button(secondframe,padx=16,pady=16,bd=8,text="5",fg="black")
+b2.pack(side=LEFT)
+b3=Button(secondframe,padx=16,pady=16,bd=8,text="6",fg="black")
+b3.pack(side=LEFT)
+b4=Button(secondframe,padx=16,pady=16,bd=8,text="-",fg="black")
+b4.pack(side=LEFT)
+
+#第三排
+thirdframe=Frame(NFU)
+thirdframe.pack(side=TOP)
+
+b1=Button(thirdframe,padx=16,pady=16,bd=8,text="7",fg="black")
+b1.pack(side=LEFT)
+b2=Button(thirdframe,padx=16,pady=16,bd=8,text="8",fg="black")
+b2.pack(side=LEFT)
+b3=Button(thirdframe,padx=16,pady=16,bd=8,text="9",fg="black")
+b3.pack(side=LEFT)
+b4=Button(thirdframe,padx=16,pady=16,bd=8,text="*",fg="black")
+b4.pack(side=LEFT)
+
+#第四排
+fourthframe=Frame(NFU)
+fourthframe.pack(side=TOP)
+
+b1=Button(fourthframe,padx=16,pady=16,bd=8,text="0",fg="black")
+b1.pack(side=LEFT)
+b2=Button(fourthframe,padx=16,pady=16,bd=8,text=".",fg="black")
+b2.pack(side=LEFT)
+b3=Button(fourthframe,padx=16,pady=16,bd=8,text="C",fg="black",command=clear)
+b3.pack(side=LEFT)
+b4=Button(fourthframe,padx=16,pady=16,bd=8,text="/",fg="black")
+b4.pack(side=LEFT)
+
+
+#第五排
+fivthframe=Frame(NFU)
+fivthframe.pack(side=TOP)
+b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black")
+b1.pack(side=LEFT)
+
+
+
+NFU.mainloop()</pre><h2>結合</h2>
+<p>我們了解了計算機的程式運作、Tkinter的簡易操作</p>
+<p>最後我們要將算式符號(+ 、 - 、 * 、 / )定義</p>
+<p>使程式可成功運行</p>
+<p><span> </span></p>
 <p></p>
