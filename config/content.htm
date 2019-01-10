@@ -87,7 +87,7 @@ elif choose == '/':
    print(int(x),"/",int(y),"=", (int(x)/int(y)))
 else:
    print("輸入錯誤")
-
+""")
 Ace.editor.scrollToRow(0)
 Ace.editor.gotoLine(0)
 
@@ -110,8 +110,28 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <p>而我們選擇Tkinter來參考並設計GUI</p>
 <p></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p>
-<h1>影片</h1>
+<h1>研究過程</h1>
 <h2>計算機程式</h2>
+<p>我們將使用PYTHON寫出一套簡易的計算機</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">x=input("first number")       輸入你要的數字1
+choose=input("+,-,*,/")       輸入你要的算式
+y=input("second number")     輸入你要的數字2
+
+
+選擇的算式去進行帶入數字1跟數字2的運算
+
+if choose == '+' :
+     print(int(x),"+",int(y),"=",(int(x)+int(y)))
+     
+elif choose == '-' :
+     print(int(x),"-",int(y),"=",(int(x)-int(y)))
+     
+elif choose == '*' :
+     print(int(x),"*",int(y),"=",(int(x)*int(y)))
+     
+elif choose == '/' :
+     print(int(x),"/",int(y),"=",(int(x)/int(y)))</pre>
+<p></p>
 <h2>Tkinter 1-1</h2>
 <p>我們將在這次的影片中講解如何簡單開啟Tkinter視窗</p>
 <p><span>    </span><span>     </span></p>
@@ -150,7 +170,7 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <p>都可以使其定義成特定的名稱，再將其導入</p>
 <p>我們將這個發現帶入專題</p>
 <p>我們想要做 出一台計算機，計算機裡的按鈕就是不是可以用Tkinter設計出來，</p>
-<p>並導入按下按鍵就可以輸入數字的定義呢?</p>
+<p>按下按鍵就可以輸入想要的數字?</p>
 <p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
 <p><span> </span></p>
 <p><span></span></p>

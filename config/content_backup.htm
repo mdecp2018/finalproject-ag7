@@ -66,41 +66,25 @@ import ace
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
 
-Ace.editor.setValue("""# 定義算式
+Ace.editor.setValue("""#輸入的數字及算式
 
-def add(x, y):
-   return x + y
-   
-def subtract(x, y):
-   return x - y
+x=input("first number")
+choose = input("(+/-/*//):")
+y=input("second number")
 
-def multiply(x, y):
-   return x * y
+#選擇四個算式之一所產生的結果
 
-def divide(x, y):
-   return x / y
+if choose == '+':
+   print(int(x),"+",int(y),"=", (int(x)+int(y)))
 
-#輸入數字及算式
+elif choose == '-':
+   print(int(x),"-",int(y),"=", (int(x)-nt(y)))
 
-num1 = int(input("输入第一個數字: "))
+elif choose == '*':
+   print(int(x),"*",int(y),"=", (int(x)*int(y)))
 
-choice = input("输入你選擇的算式(+/-/*//):")
-
-num2 = int(input("输入第二個數字: "))
-
-#運算與結果
-
-if choice == '+':
-   print(num1,"+",num2,"=", add(num1,num2))
-
-elif choice == '-':
-   print(num1,"-",num2,"=", subtract(num1,num2))
-
-elif choice == '*':
-   print(num1,"*",num2,"=", multiply(num1,num2))
-
-elif choice == '/':
-   print(num1,"/",num2,"=", divide(num1,num2))
+elif choose == '/':
+   print(int(x),"/",int(y),"=", (int(x)/int(y)))
 else:
    print("輸入錯誤")
 """)
@@ -128,7 +112,27 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p>
 <h1>影片</h1>
 <h2>計算機程式</h2>
-<h2>Tkinter 1-1</h2>
+<p>我們將使用PYTHON寫出一套簡易的計算機</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">
+x=input("first number")       輸入你要的數字1
+choose=input("+,-,*,/")       輸入你要的算式
+y=input("second number")     輸入你要的數字2
+
+
+選擇的算式去進行帶入數字1跟數字2的運算
+
+if choose == '+' :
+     print(int(x),"+",int(y),"=",(int(x)+int(y)))
+     
+elif choose == '-' :
+     print(int(x),"-",int(y),"=",(int(x)-int(y)))
+     
+elif choose == '*' :
+     print(int(x),"*",int(y),"=",(int(x)*int(y)))
+     
+elif choose == '/' :
+     print(int(x),"/",int(y),"=",(int(x)/int(y)))</pre>
+<p></p><h2>Tkinter 1-1</h2>
 <p>我們將在這次的影片中講解如何簡單開啟Tkinter視窗</p>
 <p><span>    </span><span>     </span></p>
 <table border="1" style="border-collapse: collapse; width: 91.3114%; height: 47px;">
@@ -164,10 +168,9 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <h2>Tkinter 1-2</h2>
 <p>經過1-1的操作之後，我們發現Tkinter裡像是 標題(title)、標籤(Label)、按鈕(Button)</p>
 <p>都可以使其定義成特定的名稱，再將其導入</p>
-<p></p>
 <p>我們將這個發現帶入專題</p>
 <p>我們想要做 出一台計算機，計算機裡的按鈕就是不是可以用Tkinter設計出來，</p>
-<p>並導入按下按鍵就可以輸入數字的定義呢?</p>
+<p>按下按鍵就可以輸入想要的數字?</p>
 <p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
 <p><span> </span></p>
 <p><span></span></p>
