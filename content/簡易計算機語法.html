@@ -122,44 +122,28 @@ import ace
 # Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
 Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
 
-Ace.editor.setValue("""# 定義算式
+Ace.editor.setValue("""#輸入的數字及算式
 
-def add(x, y):
-   return x + y
-   
-def subtract(x, y):
-   return x - y
+x=input("first number")
+choose = input("(+/-/*//):")
+y=input("second number")
 
-def multiply(x, y):
-   return x * y
+#選擇四個算式之一所產生的結果
 
-def divide(x, y):
-   return x / y
+if choose == '+':
+   print(int(x),"+",int(y),"=", (int(x)+int(y)))
 
-#輸入數字及算式
+elif choose == '-':
+   print(int(x),"-",int(y),"=", (int(x)-nt(y)))
 
-num1 = int(input("输入第一個數字: "))
+elif choose == '*':
+   print(int(x),"*",int(y),"=", (int(x)*int(y)))
 
-choice = input("输入你選擇的算式(+/-/*//):")
-
-num2 = int(input("输入第二個數字: "))
-
-#運算與結果
-
-if choice == '+':
-   print(num1,"+",num2,"=", add(num1,num2))
-
-elif choice == '-':
-   print(num1,"-",num2,"=", subtract(num1,num2))
-
-elif choice == '*':
-   print(num1,"*",num2,"=", multiply(num1,num2))
-
-elif choice == '/':
-   print(num1,"/",num2,"=", divide(num1,num2))
+elif choose == '/':
+   print(int(x),"/",int(y),"=", (int(x)/int(y)))
 else:
    print("輸入錯誤")
-""")
+
 Ace.editor.scrollToRow(0)
 Ace.editor.gotoLine(0)
 
