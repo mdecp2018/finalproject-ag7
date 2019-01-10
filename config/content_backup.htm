@@ -1,29 +1,22 @@
 <h1>組員介紹</h1>
-<p>
-40723142 (組長)詹昇澤 期中自評成績(60分)
-<p>
-40723132 (組員)陳乾豐 期中自評成績(68分)
-<p>
-40723126 (組員)張瑋庭 期中自評成績(65分)
-<p>
-40723122 (組員)施東勝 期中自評成績(65分)
-<p>
-40723149 (組員)鄭嘉文 期中自評成績(60分)
-<p>
-40723146 (組員)劉敬中 期中自評成績(60分)
-<p>
+<p>40723142 (組長)詹昇澤 期中自評成績(60分)</p>
+<p>40723132 (組員)陳乾豐 期中自評成績(68分)</p>
+<p>40723126 (組員)張瑋庭 期中自評成績(65分)</p>
+<p>40723122 (組員)施東勝 期中自評成績(65分)</p>
+<p>40723149 (組員)鄭嘉文 期中自評成績(60分)</p>
+<p>40723146 (組員)劉敬中 期中自評成績(60分)</p>
 <h1>專題研究</h1>
 <p>我們這次專題想研究的是如何將簡易的計算機語法寫入檔案中，</p>
 <p>再以GUI呈現並進行運作</p>
-<p></p><h1>研究方向</h1>
-<p>在我們這次的專題 因為我們需要會寫出一套簡單的計算機語言，
-<p>結合Python 內建的GUI 開發模組Tkinter將其做成一個視窗模式
-<p>所以我們的要講的部分有三種
-<h4>1.如何寫出簡易計算機的語言
-<h4>2.研究Tkinter運行方式
-<h4>3.將兩種結合 做出成果
-<p>
-<h1>簡易計算機語法</h1>
+<p></p>
+<h2>研究方向</h2>
+<p>在我們這次的專題 因為我們需要會寫出一套簡單的計算機語言，</p>
+<p>結合Python 內建的GUI 開發模組Tkinter將其做成一個視窗模式</p>
+<p>所以我們的要講的部分有三種</p>
+<h4>1.如何寫出簡易計算機的語言</h4>
+<h4>2.研究Tkinter運行方式</h4>
+<h4>3.將兩種結合 做出成果</h4>
+<h2>簡易計算機語法</h2>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -64,7 +57,7 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<p>下列是簡單的計算機程式
+<p>下列是簡單的計算機程式</p>
 <p><!-- 印出版次與關鍵字程式 --></p>
 <p>
 <script type="text/python3">
@@ -126,10 +119,56 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除</button><button onclick="window.location.reload()">Reload</button></p>
 <div style="width: 300px; height: 100px;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 285px; height: 69px;"></textarea></div>
-<br/>
-<h1>Tkinter</h1>
+<p></p>
+<h2>Tkinter</h2>
 <p>GUI 的意思是 圖形使用者介面</p>
 <p>我們要使用PYTHON將計算機以GUI的方式呈現</p>
 <p>而我們選擇Tkinter來參考並設計GUI</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DVBrpQVKBeQ" width="560"></iframe></p><h1>成果</h1>
-<script type="text/python3"></script></p></p></h4></h4></h4></p></p></p></p></p></p></p></p></p></p>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p>
+<h1>影片</h1>
+<h2>計算機程式</h2>
+<h2>Tkinter 1-1</h2>
+<p>我們將在這次的影片中講解如何簡單開啟Tkinter視窗</p>
+<p><span>    </span><span>     </span></p>
+<table border="1" style="border-collapse: collapse; width: 91.3114%; height: 47px;">
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 53.9252%; height: 47px;">
+<p>from tkinter import *     </p>
+<p>NFU=<span style="color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; background-color: #ffffff; font-weight: bold;"><span style="font-weight: bold;">Tk</span></span><span style="color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit; background-color: #ffffff;">()  </span></p>
+<p><span style="color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit; background-color: #ffffff;">NFU.geometry("320x240")</span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">NFU.title("NFU") </span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">label=</span><span style="font-weight: bold;"><span style="font-weight: bold;">Label</span></span><span style="color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit; background-color: #ffffff;">(NFU, text="Hello World!")</span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">label.</span><span style="font-weight: bold;">pack</span><span style="color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit; background-color: #ffffff;">() </span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">button=</span><span style="color: #626262; font-weight: bold;"><span style="font-weight: bold;">Button</span></span><span style="color: #626262;">(NFU, text="OK")</span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">button.pack()</span></p>
+<p><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">root.mainloop()</span></p>
+</td>
+<td style="width: 37.301%; height: 47px;">
+<p><strong><span style="background-color: #ffffff; color: #626262;">匯入模組</span></strong></p>
+<p><strong><span style="background-color: #ffffff; color: #626262;">建立視窗</span></strong></p>
+<p><strong><span style="background-color: #ffffff; color: #626262;">設定視窗大小為320x240</span></strong></p>
+<p><strong><span style="background-color: #ffffff; color: #626262; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">命名標題</span></strong></p>
+<p><strong><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">建立標籤 定義Label 名稱</span></strong></p>
+<p><strong><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">導入Label在視窗</span></strong></p>
+<p><strong><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">建立按鈕 定義Label 名稱</span></strong></p>
+<p><strong><span style="background-color: #ffffff; color: #626262;">導入button在視窗</span><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;"> </span></strong></p>
+<p><strong><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">迴圈 呼叫視窗</span></strong><span style="font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><span> </span></p>
+<h2>Tkinter 1-2</h2>
+<p>經過1-1的操作之後，我們發現Tkinter裡像是 標題(title)、標籤(Label)、按鈕(Button)</p>
+<p>都可以使其定義成特定的名稱，再將其導入</p>
+<p></p>
+<p>我們將這個發現帶入專題</p>
+<p>我們想要做 出一台計算機，計算機裡的按鈕就是不是可以用Tkinter設計出來，</p>
+<p>並導入按下按鍵就可以輸入數字的定義呢?</p>
+<p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
+<p><span> </span></p>
+<p><span></span></p>
+<p></p>
