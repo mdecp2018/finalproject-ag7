@@ -72,7 +72,7 @@ $(function(){
 
 </ul>
 </confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='組員介紹.html'>組員介紹</a><li><a href='專題研究.html'>專題研究</a><ul><li><a href='研究方向.html'>研究方向</a><li><a href='簡易計算機語法.html'>簡易計算機語法</a><li><a href='Tkinter.html'>Tkinter</a></li></ul><li><a href='研究過程.html'>研究過程</a><ul><li><a href='1-1 計算機程式.html'>1-1 計算機程式</a><li><a href='1-2 開啟Tkinter.html'>1-2 開啟Tkinter</a><li><a href='1-3 Tkinter介面按鈕定義.html'>1-3 Tkinter介面按鈕定義</a><li><a href='1-4 將兩種結合.html'>1-4 將兩種結合</a><li><a href='1-5 結果.html'>1-5 結果</a></li></ul></nav><section>1-2 開啟Tkinter << <a href='1-2 開啟Tkinter.html'>Previous</a> <a href='1-4 將兩種結合.html'>Next</a> >> 1-4 將兩種結合<br /><h1>1-3 Tkinter介面按鈕定義</h1>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='組員介紹.html'>組員介紹</a><li><a href='專題研究.html'>專題研究</a><ul><li><a href='研究方向.html'>研究方向</a><li><a href='簡易計算機語法.html'>簡易計算機語法</a><li><a href='Tkinter.html'>Tkinter</a></li></ul><li><a href='研究過程.html'>研究過程</a><ul><li><a href='1-1 計算機程式.html'>1-1 計算機程式</a><li><a href='1-2 開啟Tkinter.html'>1-2 開啟Tkinter</a><li><a href='1-3 Tkinter介面按鈕定義.html'>1-3 Tkinter介面按鈕定義</a><li><a href='1-4 將兩種結合.html'>1-4 將兩種結合</a><li><a href='1-5 成果及心得.html'>1-5 成果及心得</a></li></ul><li><a href='進度表格.html'>進度表格</a></li></ul></nav><section>1-2 開啟Tkinter << <a href='1-2 開啟Tkinter.html'>Previous</a> <a href='1-4 將兩種結合.html'>Next</a> >> 1-4 將兩種結合<br /><h1>1-3 Tkinter介面按鈕定義</h1>
 <p>經過1-2的操作之後，我們發現Tkinter裡像是 標題(title)、標籤(Label)、按鈕(Button)</p>
 <p>都可以使其定義成特定的名稱，再將其導入</p>
 <p>我們將這個發現帶入專題</p>
@@ -80,7 +80,7 @@ $(function(){
 <p>並按下按鍵就可以輸入想要的數字?</p>
 <p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
 <p><span> </span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import sys
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
 from tkinter import *
 
 NFU=Tk()
@@ -111,28 +111,6 @@ def clickbut(numbers):
     operator=operator+str(numbers)
     num1.set(operator)
     
-#定義等號算出結果
-def equal():
-     global operator
-     add=str(eval(operator))
-     num1.set(add)
-     operator=''
-def equal():
-     global operator
-     sub=str(eval(operator))
-     num1.set(sub)
-     operator=''     
-def equal():
-     global operator
-     mul=str(eval(operator))
-     num1.set(mul)
-     operator=''
-def equal():
-     global operator
-     div=str(eval(operator))
-     num1.set(div)
-     operator=''    
-
 #建立可輸入的按鍵設定
 
 #第一排
@@ -191,10 +169,11 @@ b4.pack(side=LEFT)
 #第五排
 fivthframe=Frame(NFU)
 fivthframe.pack(side=TOP)
-b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
+b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black")
 b1.pack(side=LEFT)
 
 
 
 NFU.mainloop()</pre>
-<p></p><br />1-2 開啟Tkinter << <a href='1-2 開啟Tkinter.html'>Previous</a> <a href='1-4 將兩種結合.html'>Next</a> >> 1-4 將兩種結合</section></div></body></html>
+<p></p>
+<br />1-2 開啟Tkinter << <a href='1-2 開啟Tkinter.html'>Previous</a> <a href='1-4 將兩種結合.html'>Next</a> >> 1-4 將兩種結合</section></div></body></html>
