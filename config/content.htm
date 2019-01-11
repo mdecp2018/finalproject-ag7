@@ -12,11 +12,10 @@
 <h2>研究方向</h2>
 <p>在我們這次的專題 因為我們需要會寫出一套簡單的計算機語言，</p>
 <p>結合Python 內建的GUI 開發模組Tkinter將其做成一個視窗模式</p>
-<p>所以我們的要講的部分有三種</p>
+<p>所以我們要講的部分有三個</p>
 <h4>1.如何寫出簡易計算機的語言</h4>
 <h4>2.研究Tkinter運行方式</h4>
-<h4>3.將兩種結合 做出成果</h4>
-<h2>簡易計算機語法</h2>
+<h4>3.將兩種結合 做出成果</h4><h2>簡易計算機語法</h2>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -104,11 +103,11 @@ doc['kw_clear_console'].bind('click', Ace.clear_console)
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除</button><button onclick="window.location.reload()">Reload</button></p>
 <div style="width: 300px; height: 100px;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 285px; height: 69px;"></textarea></div>
 <p></p><h2>Tkinter</h2>
-<p>GUI 的意思是 圖形使用者介面</p>
-<p>我們要使用PYTHON將計算機以GUI的方式呈現</p>
+<p>何謂GUI? Tkinter?<br/>GUI 的意思是 圖形使用者介面</p>
+<p>Tkinter 是使用python來設計視窗的模塊</p>
+<p>我們要使用PYTHON將<br/>計算機以GUI的方式呈現</p>
 <p>而我們選擇Tkinter來參考並設計GUI</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DVBrpQVKBeQ" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p>
-<h1>研究過程</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DVBrpQVKBeQ" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/_1tTS638xUQ?t=324s" width="560"></iframe></p><h1>研究過程</h1>
 <h2>1-1 計算機程式</h2>
 <p>我們要理解計算機基本的程式</p>
 <p>才可以帶入Tkinter設計裡</p>
@@ -134,7 +133,7 @@ elif choose == '/' :
      print(int(x),"/",int(y),"=",(int(x)/int(y)))</pre>
 <p></p><h2>1-2 開啟Tkinter</h2>
 <p>我們將在這次的影片中講解如何簡單開啟Tkinter視窗</p>
-<p><span>    </span><span>     </span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JWLWKx520dI?feature=youtu" width="560"></iframe></p>
 <table border="1" style="border-collapse: collapse; width: 91.3114%; height: 47px;">
 <tbody>
 <tr style="height: 47px;">
@@ -182,8 +181,7 @@ button=Button(NFU, text="OK")
 button.pack()
 
 NFU.mainloop()</pre>
-<p></p>
-<h2>1-3 Tkinter介面按鈕定義</h2>
+<p></p><h2>1-3 Tkinter介面按鈕定義</h2>
 <p>經過1-2的操作之後，我們發現Tkinter裡像是 標題(title)、標籤(Label)、按鈕(Button)</p>
 <p>都可以使其定義成特定的名稱，再將其導入</p>
 <p>我們將這個發現帶入專題</p>
@@ -191,7 +189,7 @@ NFU.mainloop()</pre>
 <p>並按下按鍵就可以輸入想要的數字?</p>
 <p><strong>1-2 做出簡單的定義按鈕及輸入數字在Tkinter視窗上的程式</strong></p>
 <p><span> </span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import sys
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
 from tkinter import *
 
 NFU=Tk()
@@ -222,28 +220,6 @@ def clickbut(numbers):
     operator=operator+str(numbers)
     num1.set(operator)
     
-#定義等號算出結果
-def equal():
-     global operator
-     add=str(eval(operator))
-     num1.set(add)
-     operator=''
-def equal():
-     global operator
-     sub=str(eval(operator))
-     num1.set(sub)
-     operator=''     
-def equal():
-     global operator
-     mul=str(eval(operator))
-     num1.set(mul)
-     operator=''
-def equal():
-     global operator
-     div=str(eval(operator))
-     num1.set(div)
-     operator=''    
-
 #建立可輸入的按鍵設定
 
 #第一排
@@ -302,7 +278,7 @@ b4.pack(side=LEFT)
 #第五排
 fivthframe=Frame(NFU)
 fivthframe.pack(side=TOP)
-b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
+b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black")
 b1.pack(side=LEFT)
 
 
@@ -337,12 +313,14 @@ def equal():
      operator=''    </pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#第五排修改部分
 b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
-b1.pack(side=LEFT)</pre><h2>1-5 結果</h2>
+b1.pack(side=LEFT)</pre><h2>1-5 成果及心得</h2>
 <p>最終，我們完成了簡易計算機</p>
 <p>而這計算機功能卻不是非常完整，它少了許多功能，像是括號、正負號.....等</p>
 <p>且功能也有點缺陷，像是清除按鈕C只能在按下等號=之後使用，正數跟負數會衝突...等</p>
 <p>再來希望這計算機程式可以像老師將Python-Course裡的語法一樣</p>
 <p>將Tkinter導入到網頁上並執行</p>
+<p>以下是成品圖</p>
+<p><img alt="" height="395" src="/images/T-3.JPG" width="230"/></p>
 <p>以下是完整計算機語法</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
 from tkinter import *

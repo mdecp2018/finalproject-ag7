@@ -30,7 +30,7 @@
 <v t="leo.20190111061214.1" a="E"><vh>何謂GUI?Tkinter?</vh>
 <v t="leo.20190111061214.2"><vh>0-3</vh></v>
 </v>
-<v t="leo.20180827201621.13"><vh>1-1</vh>
+<v t="leo.20180827201621.13" a="E"><vh>1-1</vh>
 <v t="leo.20180827201621.16" a="E"><vh>導入縮排程式碼</vh>
 <v t="leo.20180827201621.17"><vh>引用程式碼</vh></v>
 </v>
@@ -41,7 +41,7 @@
 <v t="leo.20190111063657.1"><vh>1-3-1</vh>
 <v t="leo.20190111063755.1"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20190111063854.1" a="E"><vh>1-3-2</vh>
+<v t="leo.20190111063854.1"><vh>1-3-2</vh>
 <v t="leo.20190111063854.3"><vh>引用程式碼</vh></v>
 </v>
 <v t="leo.20190111064357.1"><vh>1-3-3</vh>
@@ -59,10 +59,7 @@
 <v t="leo.20190111065544.1" a="E"><vh>1-5-1</vh>
 <v t="leo.20190111065544.2"><vh>引用程式碼</vh></v>
 </v>
-<v t="leo.20190111065628.1"><vh>1-5-2</vh>
-<v t="leo.20190111065628.2"><vh>引用程式碼</vh></v>
-</v>
-<v t="leo.20190111071029.1" a="E"><vh>1-5-3</vh>
+<v t="leo.20190111071029.1" a="E"><vh>1-5-23</vh>
 <v t="leo.20190111071029.2"><vh>引用程式碼</vh></v>
 </v>
 <v t="leo.20190111071107.1" a="E"><vh>F</vh>
@@ -179,15 +176,13 @@ vertical: body pane on the botton</t>
 我們需要會寫出一套計算機語言
 結合Python 內建的GUI 開發模組Tkinter
 將其做成一個視窗模式
-所以我們的要講的部分有三種
+所以我們的要講的部分有三個
 
 1.如何寫出簡易計算機的語言
 
 2.研究Tkinter運行方式
 
 3.將兩種結合 做出成果
-
-&lt;img alt= height="120" src="/images/0.png " width="200"/&gt;
 
 </t>
 <t tx="leo.20180827201621.13">&lt;section&gt;
@@ -347,8 +342,6 @@ Tkinter 是使用python來設計視窗的模塊
 計算機以GUI的方式呈現
 
 而我們選擇Tkinter來參考並設計GUI
-
-&lt;img alt= height="100" src="/images/T1.png " width="200"/&gt;
 </t>
 <t tx="leo.20190111061757.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -409,7 +402,9 @@ NFU.mainloop()
 
 計算機的按鈕是不是就可以用Tkinter設計出來?
 
-按下按鍵就可以輸入想要的數字?</t>
+按下按鍵就可以輸入想要的數字?
+
+</t>
 <t tx="leo.20190111063854.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -549,7 +544,9 @@ NFU.mainloop()
 
 最後我們要將算式符號(加+ 、減 - 、乘 * 、 除/ )定義
 
-使程式可成功運行</t>
+使程式可成功運行
+
+</t>
 <t tx="leo.20190111064937.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -608,7 +605,9 @@ def equal():
 #修改部分
 b1=Button(fivthframe,padx=104,pady=16,bd=8,text="=",fg="black",command=equal)
 b1.pack(side=LEFT)
-```</t>
+```
+
+</t>
 <t tx="leo.20190111065544.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -633,20 +632,9 @@ b1.pack(side=LEFT)
 
 正數跟負數會衝突...等
 
-再來希望這程式可以像老師將Python-Course裡的語法一樣導入到網頁上並執行</t>
-<t tx="leo.20190111065628.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
+再來希望這程式可以像老師將Python-Course裡的語法一樣導入到網頁上並執行
 
-
-
-						
 </t>
-<t tx="leo.20190111065628.2">## 1-5-2  成品圖片
-&lt;img alt= height="200" src="/images/T-3.JPG " width="300"/&gt;</t>
 <t tx="leo.20190111071029.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -658,7 +646,7 @@ b1.pack(side=LEFT)
 
 						
 </t>
-<t tx="leo.20190111071029.2">## 1-5-3 完整計算機程式
+<t tx="leo.20190111071029.2">## 1-5-2 完整計算機程式
 ```
 import sys
 from tkinter import *
@@ -777,7 +765,9 @@ b1.pack(side=LEFT)
 
 
 NFU.mainloop()
-```</t>
+```
+
+</t>
 <t tx="leo.20190111071107.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -790,6 +780,8 @@ NFU.mainloop()
 						
 </t>
 <t tx="leo.20190111071107.2">第七組報告到此
-謝謝大家</t>
+謝謝大家
+
+</t>
 </tnodes>
 </leo_file>
